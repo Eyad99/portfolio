@@ -33,3 +33,7 @@ export default function RootLayout({
     </html>
   );
 }
+
+// main color : #182B3D
+// secondary color : #FC4C2A [buttons]
+// text color : #fff
