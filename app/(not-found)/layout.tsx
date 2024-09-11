@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
-import Header from "@/components/widgets/header";
-import Footer from "@/components/widgets/footer";
+import "../globals.css";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -28,18 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <main className="snap-y snap-mandatory overflow-y-scroll h-screen">
-          {/* <Header /> */}
-          {children}
-          {/* <Footer /> */}
-        </main>
+        {children}
       </body>
     </html>
   );
 }
-
-// main color : #182B3D
-// secondary color : #FC4C2A [buttons]
-// text color : #fff
