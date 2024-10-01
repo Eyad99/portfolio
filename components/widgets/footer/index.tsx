@@ -8,7 +8,7 @@ const Footer = () => {
       className={`relative min-h-screen flex flex-col bg-primary`}
       aria-hidden={true}
     >
-      <div className=" flex flex-col md:mt-28 mt-14 lg:px-[10rem] px-12 py-[4rem] leading-[3rem]">
+      <div className="flex flex-col md:mt-28 mt-14 lg:px-[10rem] px-12 py-[4rem] leading-[3rem]">
         <div className="text-2xl uppercase font-bold">say hello</div>
         <div className="flex sm:flex-row flex-col sm:gap-[12rem] gap-[2rem]">
           {/* Section One */}

@@ -7,7 +7,7 @@ import { Textarea } from "../ui/textarea";
 function SendMessage() {
   return (
     <section
-      className={`min-h-screen flex flex-col items-center gap-[1rem] bg-secondary`}
+      className={`min-h-screen flex flex-col items-center gap-[1rem]`}
       aria-hidden={true}
     >
       <section className="sm:w-[75%] w-full md:mt-28 mt-14 h-fit text-center p-12">

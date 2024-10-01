@@ -1,12 +1,10 @@
 function Section3() {
   return (
     <section
-      className={`relative min-h-screen flex bg-[#8e3b3b]`}
+      className={`relative min-h-screen flex flex-col items-center bg-primary`}
       aria-hidden={true}
     >
-      <div className="container max-w-screen-xl mx-auto flex justify-center items-center text-4xl ">
-        section 3
-      </div>
+      <div className="flex mt-28 px-12 ">Section 3</div>
     </section>
   );
 }

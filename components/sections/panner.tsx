@@ -9,7 +9,7 @@ export default function Panner() {
       {/* Left side */}
       <div className="lg:w-[68%] w-[100%] bg-[#181C14] p-12 flex flex-col justify-between gap-[6rem]">
         <div className="lg:mt-28 mt-14">
-          <h1 className="lg:text-6xl text-3xl font-bold text-[#697565] mb-8">
+          <h1 className="lg:text-6xl text-3xl font-bold mb-8">
             Frontend Developer.
           </h1>
           <p className="lg:text-4xl text-xl text-white mb-8">
@@ -19,17 +19,13 @@ export default function Panner() {
         </div>
         <div className="grid grid-cols-2 gap-8">
           <div>
-            <h3 className="text-[#697565] font-semibold mb-2">
-              Highly skilled at
-            </h3>
+            <h3 className="font-semibold mb-2">Highly skilled at</h3>
             <p className="text-white sm:text-[16px] text-[12px]">
               progressive enhancement, design systems & UI Engineering.
             </p>
           </div>
           <div>
-            <h3 className="text-[#697565] font-semibold mb-2">
-              Proven experience
-            </h3>
+            <h3 className="font-semibold mb-2">Proven experience</h3>
             <p className="text-white sm:text-[16px] text-[12px]">
               building successful products for clients across several countries.
             </p>
