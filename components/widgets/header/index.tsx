@@ -1,8 +1,143 @@
-import React from "react";
+// "use client";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { Menu, X } from "lucide-react";
+// import React, { useState } from "react";
+
+// const Header = () => {
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+//   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+//   return (
+//     <div className="fixed flex z-[1]   w-[99%]">
+//       <div className="w-[68%] p-12 bg-red-50">
+//         <h1 className="text-xl font-bold text-[#697565]">ES LOGO</h1>
+//       </div>
+//       <div className="w-[32%] p-12 relative">
+//         <button
+//           onClick={toggleMenu}
+//           className="absolute top-8 right-8 z-50"
+//           aria-label="Toggle menu"
+//         >
+//           {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+//         </button>
+
+//         <AnimatePresence>
+//           {isMenuOpen && (
+//             <motion.div
+//               initial={{ opacity: 0, y: -20 }}
+//               animate={{ opacity: 1, y: 0 }}
+//               exit={{ opacity: 0, y: -20 }}
+//               className="absolute inset-0  bg-white p-12 flex flex-col"
+//             >
+//               <div className="flex-1 z-[1000]">
+//                 <h2 className="text-3xl font-bold mb-8">Menu</h2>
+//                 <div className="space-y-4">
+//                   <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+//                     Home
+//                   </button>
+//                   <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+//                     About
+//                   </button>
+//                   <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+//                     Projects
+//                   </button>
+//                   <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+//                     Contact
+//                   </button>
+//                 </div>
+//               </div>
+//               <div className="mt-auto">
+//                 <p className="text-gray-600">
+//                   © 2024 Frontend Developer. All rights reserved.
+//                 </p>
+//               </div>
+//             </motion.div>
+//           )}
+//         </AnimatePresence>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Header;
+
+"use client";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
+import React, { useState } from "react";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [drawerX, setDrawerX] = useState("67.2%");
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Dynamically adjust the position based on the screen width
+  React.useEffect(() => {
+    const updateDrawerX = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 1024) {
+        setDrawerX("67.2%");
+      } else {
+        setDrawerX("0");
+      }
+    };
+
+    updateDrawerX();
+
+    window.addEventListener("resize", updateDrawerX);
+
+    return () => {
+      window.removeEventListener("resize", updateDrawerX);
+    };
+  }, []);
   return (
-    <div className="fixed z-[1000] h-[11rem] bg-red-600 w-[99%]">Header</div>
+    <div className="fixed top-0 left-0 w-full z-50">
+      {/* Header content */}
+      <div className="flex justify-between items-center px-12 py-6 w-full ">
+        <h1 className="text-xl font-bold text-[#697565]">ES LOGO</h1>
+        <button onClick={toggleMenu} className="z-50" aria-label="Toggle menu">
+          {isMenuOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
+      </div>
+
+      {/* Drawer content */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, x: "100%" }}
+            animate={{ opacity: 1, x: drawerX }}
+            exit={{ opacity: 0, x: "100%" }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-40 bg-white p-12 flex flex-col"
+          >
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold mb-8">Menu</h2>
+              <div className="space-y-4 w-[28.2%]">
+                <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+                  Home
+                </button>
+                <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+                  About
+                </button>
+                <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+                  Projects
+                </button>
+                <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+                  Contact
+                </button>
+              </div>
+            </div>
+            <div className="mt-auto">
+              <p className="text-gray-600">
+                © 2024 Frontend Developer. All rights reserved.
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };
 
