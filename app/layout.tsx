@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/widgets/header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,14 +29,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <main className="snap-y snap-mandatory overflow-y-scroll h-screen">
-          {/* <Header /> */}
           {children}
         </main>
       </body>
     </html>
   );
 }
-
-// main color : #182B3D
-// secondary color : #FC4C2A [buttons]
-// text color : #fff
