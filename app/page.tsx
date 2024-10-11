@@ -10,13 +10,13 @@ export default function Home() {
   return (
     <Fragment>
       <Header />
-      {/* <div className="snap-always snap-center">
+      <div className="snap-always snap-center">
         <Panner />
       </div>
 
       <div className="snap-always snap-center">
         <MySkills />
-      </div> */}
+      </div>
 
       <div className="snap-always snap-center">
         <MyWorks />

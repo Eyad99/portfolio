@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ugariteLogo from "@/assets/img/ugarite.png";
 import cubetaLogo from "@/assets/img/cubeta.png";
+import Link from "next/link";
 
 interface Project {
   logo: string;
@@ -16,7 +17,7 @@ const projects: Project[] = [
   {
     logo: "/placeholder.svg?height=50&width=100",
     title: "GoDev",
-    url: "app.hellotax.com",
+    url: "https://godev.app/",
   },
   {
     logo: ugariteLogo.src,
@@ -45,6 +46,9 @@ function MyWorks() {
         <h1 className="text-2xl font-bold text-center mb-8">
           Selected work I have taken on in the past.
         </h1>
+        <Link href={"eyad"}>
+          <span className="text-red-500">eyad</span>
+        </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 ">
           {projects.map((project, index) => (
@@ -55,15 +59,17 @@ function MyWorks() {
             >
               <Card className="overflow-hidden cursor-pointer">
                 <CardHeader className="p-12 bg-secondary">
-                  <Image
-                    src={project.logo}
-                    alt={`${project.title} logo`}
-                    width={100}
-                    height={50}
-                    className="h-12 w-auto object-contain"
-                  />
+                  <Link href={project.title} passHref>
+                    <Image
+                      src={project.logo}
+                      alt={`${project.title} logo`}
+                      width={100}
+                      height={60}
+                      className="h-12 w-auto object-contain"
+                    />
+                  </Link>
                 </CardHeader>
-                <CardContent className="p-4">
+                <CardContent className="p-4 bg-[#e6e6e6]">
                   <CardTitle className="text-xl mb-2">
                     {project.title}
                   </CardTitle>
