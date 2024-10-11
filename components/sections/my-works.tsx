@@ -53,7 +53,7 @@ function MyWorks() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <Card className="overflow-hidden ">
+              <Card className="overflow-hidden cursor-pointer">
                 <CardHeader className="p-12 bg-secondary">
                   <Image
                     src={project.logo}
