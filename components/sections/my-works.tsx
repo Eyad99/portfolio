@@ -6,32 +6,31 @@ import Image from "next/image";
 import ugariteLogo from "@/assets/img/ugarite.png";
 import cubetaLogo from "@/assets/img/cubeta.png";
 import Link from "next/link";
+import { Project } from "@/core";
 
-interface Project {
-  logo: string;
-  title: string;
-  url: string;
-}
-
-const projects: Project[] = [
+const companies: Project[] = [
   {
     logo: "/placeholder.svg?height=50&width=100",
     title: "GoDev",
+    link: "go-dev",
     url: "https://godev.app/",
   },
   {
     logo: ugariteLogo.src,
     title: "Ugaritech",
+    link: "ugaritech",
     url: "https://ugaritech.ca/",
   },
   {
     logo: cubetaLogo.src,
     title: "Cubeta",
+    link: "cubeta",
     url: "https://cubeta.io/",
   },
   {
     logo: "/placeholder.svg?height=50&width=100",
     title: "Big Bang Its",
+    link: "big-bang-its",
     url: "https://its.ae/",
   },
 ];
@@ -48,18 +47,18 @@ function MyWorks() {
         </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 ">
-          {projects.map((project, index) => (
+          {companies.map((company, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Card className="overflow-hidden cursor-pointer">
-                <Link href={project.title} passHref>
+                <Link href={`/company/${company.link}`} passHref>
                   <CardHeader className="p-12 bg-secondary">
                     <Image
-                      src={project.logo}
-                      alt={`${project.title} logo`}
+                      src={company.logo}
+                      alt={`${company.title} logo`}
                       width={100}
                       height={60}
                       className="h-12 w-auto object-contain"
@@ -68,13 +67,13 @@ function MyWorks() {
                 </Link>
                 <CardContent className="p-4 bg-[#e6e6e6]">
                   <CardTitle className="text-xl mb-2">
-                    {project.title}
+                    {company.title}
                   </CardTitle>
                   <motion.p
                     className="text-sm text-muted-foreground"
                     whileHover={{ color: "#2563eb" }}
                   >
-                    {project.url}
+                    {company.url}
                   </motion.p>
                 </CardContent>
               </Card>
