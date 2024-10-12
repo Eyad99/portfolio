@@ -2,14 +2,14 @@ import MyWorks from "@/components/sections/my-works";
 import Panner from "@/components/sections/panner";
 import SendMessage from "@/components/sections/sendMessage";
 import Footer from "@/components/widgets/footer";
-import Header from "@/components/widgets/header";
+// import Header from "@/components/widgets/header";
 import { Fragment } from "react";
 import MySkills from "@/components/sections/my-skills";
 
 export default function Home() {
   return (
     <Fragment>
-      <Header />
+      {/* <Header /> */}
       <div className="snap-always snap-center">
         <Panner />
       </div>

@@ -46,9 +46,6 @@ function MyWorks() {
         <h1 className="text-2xl font-bold text-center mb-8">
           Selected work I have taken on in the past.
         </h1>
-        <Link href={"eyad"}>
-          <span className="text-red-500">eyad</span>
-        </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6 ">
           {projects.map((project, index) => (
@@ -58,8 +55,8 @@ function MyWorks() {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Card className="overflow-hidden cursor-pointer">
-                <CardHeader className="p-12 bg-secondary">
-                  <Link href={project.title} passHref>
+                <Link href={project.title} passHref>
+                  <CardHeader className="p-12 bg-secondary">
                     <Image
                       src={project.logo}
                       alt={`${project.title} logo`}
@@ -67,8 +64,8 @@ function MyWorks() {
                       height={60}
                       className="h-12 w-auto object-contain"
                     />
-                  </Link>
-                </CardHeader>
+                  </CardHeader>
+                </Link>
                 <CardContent className="p-4 bg-[#e6e6e6]">
                   <CardTitle className="text-xl mb-2">
                     {project.title}
