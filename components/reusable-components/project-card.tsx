@@ -21,18 +21,21 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
     >
       <Card className="cursor-pointer min-h-[290px]">
         <Link href={`/company/${companyName}/${project.link}`} passHref>
-          <CardHeader className="p-12 bg-[rgba(245,244,252,0.62)] h-[170px] flex items-center justify-center ">
+          {/* <CardHeader className="p-12 bg-[rgba(245,244,252,0.62)] h-[170px] flex items-center justify-center "> */}
+          <CardHeader className="p-12 bg-[rgba(236,236,236,0.62)] h-[170px] flex items-center justify-center rounded-t-sm ">
             <Image
               src={project.logo}
               alt={`${project.title} logo`}
               width={130}
               height={60}
-              className="h-20 object-contain"
+              className="h-20 object-contain "
             />
           </CardHeader>
         </Link>
         <CardContent className="p-8 h-[120px]">
-          <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
+          <CardTitle className="text-xl mb-2 text-[#474747]">
+            {project.title}
+          </CardTitle>
           <motion.p
             className="text-sm text-muted-foreground"
             whileHover={{ color: "#2563eb" }}

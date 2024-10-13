@@ -1,14 +1,13 @@
 import React from "react";
 import ProjectCard from "../../reusable-components/project-card";
 import { Project } from "@/core";
-import dticLogo from "@/assets/img/streetleague.png";
+import guidanceLogo from "@/assets/img/guidance.png";
 
 const Ugaritech = () => {
   const projects: Project[] = [
     {
-      logo: dticLogo.src,
+      logo: guidanceLogo.src,
       title: "Guidance",
-      url: "https://dtic.co/",
     },
   ];
   return (

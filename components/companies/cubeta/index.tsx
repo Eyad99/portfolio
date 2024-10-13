@@ -1,17 +1,17 @@
 import React from "react";
 import ProjectCard from "../../reusable-components/project-card";
 import { Project } from "@/core";
-import dticLogo from "@/assets/img/streetleague.png";
+import rushLogo from "@/assets/img/rush.png";
 
 const Cubeta = () => {
   const projects: Project[] = [
     {
-      logo: dticLogo.src,
+      logo: rushLogo.src,
       title: "Rush",
-      url: "https://dtic.co/",
+      url: "https://lb-merchant.redrush.co/",
     },
     {
-      logo: dticLogo.src,
+      logo: rushLogo.src,
       title: "Batna",
       url: "https://dtic.co/",
     },

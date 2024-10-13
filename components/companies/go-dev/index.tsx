@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "../../reusable-components/project-card";
 import { Project } from "@/core";
 import streetLeagueLogo from "@/assets/img/streetleague.png";
+import streetLeagueLDashboardogo from "@/assets/img/streetleague1.png";
 import insihtsLogo from "@/assets/img/insights.png";
 
 const Godev = () => {
@@ -11,6 +12,12 @@ const Godev = () => {
       title: "Street League",
       link: "street-league",
       url: "https://streetleague.ae/",
+    },
+    {
+      logo: streetLeagueLDashboardogo.src,
+      title: "Street League Dashboard",
+      link: "street-league-dashboard",
+      url: "https://control-panel.streetleague.ae/",
     },
     {
       logo: insihtsLogo.src,

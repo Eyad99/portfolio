@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "../../reusable-components/project-card";
 import { Project } from "@/core";
-import dticLogo from "@/assets/img/streetleague.png";
+import dticLogo from "@/assets/img/dtic.png";
 
 const BigBang = () => {
   const projects: Project[] = [
