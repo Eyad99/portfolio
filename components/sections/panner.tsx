@@ -5,7 +5,7 @@ import Image from "next/image";
 import person from "@/assets/img/profile.png";
 export default function Panner() {
   return (
-    <div className="flex min-h-screen lg:flex-row flex-col">
+    <div className="flex min-h-screen lg:flex-row flex-col" id="/">
       {/* Left side */}
       <div className="lg:w-[68%] w-[100%] bg-[#181C14] p-12 flex flex-col justify-between gap-[6rem]">
         <div className="lg:mt-28 mt-14">

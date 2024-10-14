@@ -4,7 +4,7 @@ import SendMessage from "@/components/sections/sendMessage";
 import Footer from "@/components/widgets/footer";
 // import Header from "@/components/widgets/header";
 import { Fragment } from "react";
-import MySkills from "@/components/sections/my-skills";
+// import MySkills from "@/components/sections/my-skills";
 
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
         <Panner />
       </div>
 
-      <div className="snap-always snap-center">
+      {/* <div className="snap-always snap-center">
         <MySkills />
-      </div>
+      </div> */}
 
       <div className="snap-always snap-center">
         <MyWorks />

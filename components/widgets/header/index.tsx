@@ -1,6 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Header = () => {
@@ -29,6 +30,9 @@ const Header = () => {
       window.removeEventListener("resize", updateDrawerX);
     };
   }, []);
+
+  const linkClassName =
+    "block w-full text-left py-2 px-4 rounded hover:bg-gray-100";
   return (
     <div className="fixed top-0 left-0 w-full z-50">
       {/* Header content */}
@@ -52,18 +56,24 @@ const Header = () => {
             <div className="flex-1">
               <h2 className="text-3xl font-bold mb-8">Menu</h2>
               <div className="space-y-4 w-[28.2%]">
-                <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+                <Link className={linkClassName} href="/" passHref>
                   Home
-                </button>
-                <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
-                  About
-                </button>
-                <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
+                </Link>
+                <Link className={linkClassName} href="/#work" passHref>
+                  Work
+                </Link>
+                {/* <Link className={linkClassName} href="/projects" passHref>
                   Projects
-                </button>
-                <button className="block w-full text-left py-2 px-4 rounded hover:bg-gray-100">
-                  Contact
-                </button>
+                </Link> */}
+                <Link
+                  className={linkClassName}
+                  href="/pdf/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  locale={false}
+                >
+                  My Resume
+                </Link>
               </div>
             </div>
             <div className="mt-auto">

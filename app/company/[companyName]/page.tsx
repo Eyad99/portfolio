@@ -19,7 +19,7 @@ const CompanyName = () => {
         return <Ugaritech />;
       case "cubeta":
         return <Cubeta />;
-      case "big-bang-its":
+      case "big-bang":
         return <BigBang />;
 
       default:

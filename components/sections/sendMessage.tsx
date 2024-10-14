@@ -9,6 +9,7 @@ function SendMessage() {
     <section
       className={`min-h-screen flex flex-col items-center gap-[1rem]`}
       aria-hidden={true}
+      id="contact"
     >
       <section className="sm:w-[75%] w-full md:mt-28 mt-14 h-fit text-center p-12">
         <h1 className="max-md:text-3xl text-5xl mb-2 font-bold">
