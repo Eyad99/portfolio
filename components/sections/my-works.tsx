@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import goDevLogo from "@/assets/img/goedv.png";
 import ugariteLogo from "@/assets/img/ugarite.png";
 import cubetaLogo from "@/assets/img/cubeta.png";
 import Link from "next/link";
@@ -10,7 +11,7 @@ import { Project } from "@/core";
 
 const companies: Project[] = [
   {
-    logo: "/placeholder.svg?height=50&width=100",
+    logo: goDevLogo.src,
     title: "GoDev",
     link: "go-dev",
     url: "https://godev.app/",

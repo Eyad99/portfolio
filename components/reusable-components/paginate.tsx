@@ -16,20 +16,22 @@ const Paginate = ({ text, link }: { text: string; link: string }) => {
     },
   };
   return (
-    <Link href={link} passHref>
-      <div className="flex items-center w-fit cursor-pointer hover:underline">
-        <span className="text-lg font-semibold">{text}</span>
-        <div className="w-8 flex justify-center">
-          <motion.div
-            initial="initial"
-            animate="animate"
-            variants={arrowVariants}
-          >
-            <ArrowRight className="w-6 h-6  " />
-          </motion.div>
+    <div className="flex items-center w-fit cursor-pointer hover:underline">
+      <Link href={link} passHref>
+        <div className="flex items-center">
+          <span className="text-lg font-semibold">{text}</span>
+          <div className="w-8 flex justify-center">
+            <motion.div
+              initial="initial"
+              animate="animate"
+              variants={arrowVariants}
+            >
+              <ArrowRight className="w-6 h-6  " />
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };
 

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { Globe } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -40,7 +41,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
             className="text-sm text-muted-foreground"
             whileHover={{ color: "#2563eb" }}
           >
-            {project.url}
+            {/* <Globe onClick={() => project.url} /> */}
+            <Link href={`${project.url}`} target="_blank" passHref>
+              {project.url}
+            </Link>
           </motion.p>
         </CardContent>
       </Card>

@@ -6,8 +6,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
 import Paginate from "@/components/reusable-components/paginate";
+import MainImage from "@/assets/projects/street-league/main.png";
+import Image from "next/image";
+import Link from "next/link";
+
 const StreetLeague = () => {
   return (
     <div className="flex flex-col justify-center items-center m-28 gap-16">
@@ -17,32 +20,38 @@ const StreetLeague = () => {
         opts={{
           align: "start",
         }}
-        className="w-full max-w-2xl "
+        className="w-full max-w-8xl"
       >
         <CarouselContent className="">
           {Array.from({ length: 5 }).map((_, index) => (
-            <CarouselItem key={index} className="">
+            <CarouselItem key={index}>
               <div className="p-1 ">
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <span className="text-4xl font-semibold">{index + 1}</span>
-                  </CardContent>
-                </Card>
+                <Image objectFit="fill" src={MainImage} alt="MainImage" />
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
 
-        {/* <CarouselPrevious className=" text-black border-none bg-transparent" /> */}
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
 
-      <div className="w-[90%] text-lg">
+      <div className="w-[90%] text-lg flex flex-col gap-2">
         <p>
-          Street League provides a platform for users to purchase merchandise
-          related to football, book football grounds, and participate in
-          football-related events and activities.
+          Street League is a platform centered around competitive sports leagues
+          and events. It offers a space for teams and players to engage in
+          various sports competitions. The site provides registration options,
+          event details, and access to their shop for sports gear and
+          accessories. Additionally, users can follow updates and connect with
+          the community through the platform. It also offers downloadable apps
+          for easy access to schedules, results, and other relevant information.
+          For more details,you can visit{" "}
+          <Link href="https://streetleague.ae/" target="blank" passHref>
+            <span className="text-blue-500 hover:underline">
+              Street League's website
+            </span>
+            .
+          </Link>
         </p>
         <Paginate
           text="Next Project"
