@@ -1,4 +1,7 @@
 import React from "react";
+import Paginate from "@/components/reusable-components/paginate";
+import Image from "next/image";
+import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
@@ -6,12 +9,24 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Paginate from "@/components/reusable-components/paginate";
+
+import CustomProductImage from "@/assets/projects/street-league/custom-product.png";
+import FilterProductImage from "@/assets/projects/street-league/filter-product.png";
+import SingeProductImage from "@/assets/projects/street-league/single-product.png";
+import ProductsImage from "@/assets/projects/street-league/product.png";
+import StudiomImage from "@/assets/projects/street-league/studiom.png";
 import MainImage from "@/assets/projects/street-league/main.png";
-import Image from "next/image";
-import Link from "next/link";
 
 const StreetLeague = () => {
+  const ImagesEmun = [
+    { image: MainImage, alt: "MainImage" },
+    { image: ProductsImage, alt: "ProductsImage" },
+    { image: SingeProductImage, alt: "SingeProductImage" },
+    { image: FilterProductImage, alt: "FilterProductImage" },
+    { image: CustomProductImage, alt: "CustomProductImage" },
+    { image: StudiomImage, alt: "StudiomImage" },
+  ];
+
   return (
     <div className="flex flex-col justify-center items-center m-28 gap-16">
       <h1 className="font-bold text-4xl ">StreetLeague</h1>
@@ -22,11 +37,11 @@ const StreetLeague = () => {
         }}
         className="w-full max-w-8xl"
       >
-        <CarouselContent className="">
-          {Array.from({ length: 5 }).map((_, index) => (
+        <CarouselContent>
+          {ImagesEmun.map((image, index) => (
             <CarouselItem key={index}>
               <div className="p-1 ">
-                <Image objectFit="fill" src={MainImage} alt="MainImage" />
+                <Image objectFit="fill" src={image.image} alt={image.alt} />
               </div>
             </CarouselItem>
           ))}
