@@ -36,7 +36,7 @@ const StreetLeagueDashboard = () => {
       </Carousel>
 
       <div className="w-[90%] text-lg flex flex-col gap-2">
-        <p>Street League Dashbaord is a platform</p>
+        <p>Street League Dashbaord is a platform .</p>
         <Paginate text="Next Project" link="/company/go-dev/audio-analysis" />
       </div>
     </div>
