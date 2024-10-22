@@ -19,6 +19,7 @@ const Footer = () => {
             >
               iead.sh123@gmail
             </Link>
+
             <Link
               href="https://t.me/eyad_sharaf_almasri"
               className="text-secondary text-opacity-6"

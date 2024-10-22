@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #F5F5F5;
+  --background: #f5f5f5;
   --foreground: #697565;
 }
 
@@ -24,8 +24,14 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .glow {
+    --glow-color: rgba(0, 0, 0, 0);
+  }
+  .glow-blue {
+    --glow-color: #00d6fd;
+  }
 }
-
+ 
 @layer base {
   :root {
     --background: 0 0% 100%;
