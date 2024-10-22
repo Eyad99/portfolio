@@ -13,14 +13,14 @@ import {
 import CustomProductImage from "@/assets/projects/street-league/custom-product.png";
 import FilterProductImage from "@/assets/projects/street-league/filter-product.png";
 import SingeProductImage from "@/assets/projects/street-league/single-product.png";
-import ProductsImage from "@/assets/projects/street-league/product.png";
 import StudiomImage from "@/assets/projects/street-league/studiom.png";
+import MyTeamImage from "@/assets/projects/street-league/my-team.png";
 import MainImage from "@/assets/projects/street-league/main.png";
 
 const StreetLeague = () => {
   const ImagesEmun = [
     { image: MainImage, alt: "MainImage" },
-    { image: ProductsImage, alt: "ProductsImage" },
+    { image: MyTeamImage, alt: "MyTeamImage" },
     { image: SingeProductImage, alt: "SingeProductImage" },
     { image: FilterProductImage, alt: "FilterProductImage" },
     { image: CustomProductImage, alt: "CustomProductImage" },
@@ -46,7 +46,6 @@ const StreetLeague = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
@@ -65,7 +64,6 @@ const StreetLeague = () => {
             <span className="text-blue-500 hover:underline">
               Street League's website
             </span>
-            .
           </Link>
         </p>
         <Paginate
