@@ -11,11 +11,6 @@ const Cubeta = () => {
       title: "Rush",
       url: "https://lb-merchant.redrush.co/",
     },
-    {
-      logo: rushLogo.src,
-      title: "Batna",
-      url: "https://dtic.co/",
-    },
   ];
   return (
     <section
