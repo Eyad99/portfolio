@@ -40,6 +40,8 @@ function MySkills() {
   //   };
   // }, []);
 
+  const arr = [];
+
   const GridClassName =
     "grid auto-cols-[96px] gap-6 justify-start mb-6 relative whitespace-nowrap grid-flow-col ";
   const CardClassName =
