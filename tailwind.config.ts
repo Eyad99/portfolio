@@ -56,6 +56,9 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        blur: '0 0 30px',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
