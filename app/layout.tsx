@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/widgets/header";
+import RouadMap from "@/components/reusable-components/rouad-map";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,8 +32,8 @@ export default function RootLayout({
       >
         <main className="snap-y snap-mandatory overflow-y-scroll h-screen">
           <Header />
-
           {children}
+          <RouadMap />
         </main>
       </body>
     </html>

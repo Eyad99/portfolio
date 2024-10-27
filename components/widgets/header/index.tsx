@@ -56,21 +56,38 @@ const Header = () => {
             <div className="flex-1">
               <h2 className="text-3xl font-bold mb-8">Menu</h2>
               <div className="space-y-4 w-[28.2%]">
-                <Link className={linkClassName} href="/" passHref>
-                  Home
-                </Link>
-                <Link className={linkClassName} href="/#work" passHref>
-                  Work
-                </Link>
-                {/* <Link className={linkClassName} href="/projects" passHref>
-                  Projects
-                </Link> */}
                 <Link
                   className={linkClassName}
-                  href="/pdf/resume.pdf"
+                  href="/"
+                  passHref
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("panner")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Home
+                </Link>
+                <Link
+                  className={linkClassName}
+                  href="/#work"
+                  passHref
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document
+                      .getElementById("work")
+                      ?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Work
+                </Link>
+
+                <Link
+                  className={linkClassName}
+                  href="@/assets/pdf/resume.pdf"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  locale={false}
+                  passHref
                 >
                   My Resume
                 </Link>
