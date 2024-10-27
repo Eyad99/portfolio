@@ -8,9 +8,9 @@ import { Fragment } from "react";
 export default function Home() {
   return (
     <Fragment>
-      {/* <div className="snap-always snap-center">
+      <div className="snap-always snap-center">
         <Panner />
-      </div> */}
+      </div>
 
       <div className="snap-always snap-center">
         <MySkills />
