@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
-        <main className="snap-y snap-mandatory overflow-y-scroll h-screen">
+        <main className="snap-y snap-mandatory overflow-y-scroll h-screen scrollbar">
           <Header />
           {children}
           <RouadMap />

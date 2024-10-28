@@ -30,6 +30,23 @@ body {
   .glow-blue {
     --glow-color: #00d6fd;
   }
+
+   .scrollbar::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    /* display: none; */
+
+  }
+
+   .scrollbar::-webkit-scrollbar-track {
+    background: #F5F5F5;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #697565;
+    /* border-radius: 6px; */
+  }
+ 
 }
  
 @layer base {
