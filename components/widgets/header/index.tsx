@@ -33,6 +33,7 @@ const Header = () => {
 
   const linkClassName =
     "block w-full text-left py-2 px-4 rounded hover:bg-gray-100";
+  const contactWithMeClassName = "block w-full text-left py-2 px-4 rounded";
   return (
     <div className="fixed top-0 left-0 w-full z-50">
       {/* Header content */}
@@ -55,7 +56,7 @@ const Header = () => {
           >
             <div className="flex-1">
               <h2 className="text-3xl font-bold mb-8">Menu</h2>
-              <div className="space-y-4 w-[28.2%]">
+              <div className="space-y-4 w-[28.2%] ">
                 <Link
                   className={linkClassName}
                   href="/"
@@ -91,6 +92,27 @@ const Header = () => {
                 >
                   My Resume
                 </Link>
+              </div>
+
+              <div className="flex-1">
+                <h4 className="text-3xl font-bold my-8">Say Hello</h4>
+                <div className="space-y-4">
+                  <Link
+                    href="mailto:iead.sh123@gmail.com"
+                    className={contactWithMeClassName}
+                  >
+                    iead.sh123@gmail
+                  </Link>
+
+                  <Link
+                    href="https://t.me/eyad_sharaf_almasri"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={contactWithMeClassName}
+                  >
+                    t.me/eyad
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="mt-auto">
