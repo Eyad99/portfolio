@@ -1,8 +1,8 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
-import Link from "next/link";
+
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Mail, Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,9 +31,33 @@ const Header = () => {
     };
   }, []);
 
-  const linkClassName =
-    "block w-full text-left py-2 px-4 rounded hover:bg-gray-100";
-  const contactWithMeClassName = "block w-full text-left py-2 px-4 rounded";
+  const menuVariants = {
+    closed: {
+      opacity: 0,
+      transition: {
+        staggerChildren: 0.1,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    closed: {
+      y: 20,
+      opacity: 0,
+    },
+    open: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
     <div className="fixed top-0 left-0 w-full z-50">
       {/* Header content */}
@@ -52,15 +76,20 @@ const Header = () => {
             animate={{ opacity: 1, x: drawerX }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-white p-12 flex flex-col"
+            className="fixed inset-0 z-40 bg-secondary p-12 flex flex-col shadow-md"
           >
-            <div className="flex-1">
-              <h2 className="text-3xl font-bold mb-8">Menu</h2>
-              <div className="space-y-4 w-[28.2%] ">
-                <Link
-                  className={linkClassName}
+            <motion.div
+              initial="closed"
+              animate="open"
+              exit="closed"
+              variants={menuVariants}
+              className="h-full flex flex-col justify-center px-6 py-12"
+            >
+              <nav className="space-y-8 mb-16">
+                <motion.a
                   href="/"
-                  passHref
+                  variants={itemVariants}
+                  className="block text-4xl font-light hover:text-primary transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -69,11 +98,11 @@ const Header = () => {
                   }}
                 >
                   Home
-                </Link>
-                <Link
-                  className={linkClassName}
+                </motion.a>
+                <motion.a
                   href="/#work"
-                  passHref
+                  variants={itemVariants}
+                  className="block text-4xl font-light hover:text-primary transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -82,44 +111,48 @@ const Header = () => {
                   }}
                 >
                   Work
-                </Link>
-
-                <Link
-                  className={linkClassName}
+                </motion.a>
+                <motion.a
                   href="@/assets/pdf/resume.pdf"
+                  variants={itemVariants}
+                  className="block text-4xl font-light hover:text-primary transition-colors"
                   target="_blank"
-                  passHref
                 >
                   My Resume
-                </Link>
-              </div>
+                </motion.a>
+              </nav>
 
-              <div className="flex-1">
-                <h4 className="text-3xl font-bold my-8">Say Hello</h4>
+              <motion.div variants={itemVariants} className="space-y-8">
+                <h2 className="text-2xl font-light text-primary">Say Hello</h2>
                 <div className="space-y-4">
-                  <Link
+                  <a
                     href="mailto:iead.sh123@gmail.com"
-                    className={contactWithMeClassName}
+                    className="flex items-center gap-2 text-lg hover:text-primary transition-colors"
                   >
-                    iead.sh123@gmail
-                  </Link>
-
-                  <Link
+                    <Mail className="h-5 w-5" />
+                    iead.sh123@gmail.com
+                  </a>
+                  <a
                     href="https://t.me/eyad_sharaf_almasri"
+                    className="flex items-center gap-2 text-lg hover:text-primary transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={contactWithMeClassName}
                   >
+                    <ExternalLink className="h-5 w-5" />
                     t.me/eyad
-                  </Link>
+                  </a>
                 </div>
-              </div>
-            </div>
-            <div className="mt-auto">
-              <p className="text-gray-600">
-                © {new Date().getFullYear()} Eyad Sharaf Almasri.
-              </p>
-            </div>
+              </motion.div>
+
+              <motion.footer
+                variants={itemVariants}
+                className="absolute bottom-8 px-[5] "
+              >
+                <p className="text-sm text-primary">
+                  © {new Date().getFullYear()} Eyad Sharaf Almasri.
+                </p>
+              </motion.footer>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
