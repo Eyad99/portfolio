@@ -1,22 +1,25 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export function useWindowWidth() {
-	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
+	const [windowWidth, setWindowWidth] = useState(
+		typeof window !== 'undefined' ? window.innerWidth : 0
+	);
 	useEffect(() => {
+		if (typeof window === 'undefined') return; // Ensure window is defined
+
 		// Function to update window width
 		function handleResize() {
 			setWindowWidth(window.innerWidth);
 		}
 
 		// Attach event listener
-		window.addEventListener("resize", handleResize);
+		 window.addEventListener('resize', handleResize);
 
 		// Cleanup the event listener on component unmount
 		return () => {
-			window.removeEventListener("resize", handleResize);
+			 window.removeEventListener('resize', handleResize);
 		};
-	}, []); // Empty dependency array ensures that effect runs only once on mount
+	}, []); 
 
 	return windowWidth;
 }
