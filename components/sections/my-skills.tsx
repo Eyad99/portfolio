@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useMemo } from 'react';
 import { useWindowWidth } from '@/hocs/useWindowWidth';
 import { cn } from '@/lib/utils';
 
@@ -22,7 +22,7 @@ import jsIcon from '@/assets/img/my-skills/js.svg';
 
 const GridClassName = 'grid auto-cols-[96px] gap-6 justify-start mb-6 relative whitespace-nowrap grid-flow-col ';
 const CardClassName =
-	'flex justify-center items-center w-[96px] h-[96px] cursor-pointer rounded-xl border border-[rgba(38,38,38,.7)] bg-[rgba(236,236,236,0.62)] p-6';
+	'flex justify-center items-center w-[96px] h-[96px] cursor-pointer rounded-xl border border-[rgba(38,38,38,.7)] bg-[rgba(236,236,236,0.62)] p-6 transition-all duration-300';
 
 const ImagesObj: {
 	[key: string]: { image: any; alt: string; color: string };
@@ -94,10 +94,7 @@ function MySkills() {
 			)]: ImagesObj.framerMotion,
 		};
 	}, [width]);
-	const [isHovered, setIsHovered] = useState<string>('');
 
-	const handleMouseEnter = (key: string) => setIsHovered(key);
-	const handleMouseLeave = () => setIsHovered('');
 	const gridItems = useMemo(() => {
 		return Array.from({
 			length: width > 620 ? 5 : width < 620 && width > 450 ? 7 : 9,
@@ -116,16 +113,15 @@ function MySkills() {
 						<div
 							key={ind}
 							className={cn(CardClassName, {
-								'flex flex-col': imageData,
+								'flex flex-col hover:[box-shadow:0_0_30px_var(--card-color)]': imageData,
 								'transform scale-100 hover:scale-90 translate-z-0 transition-transform duration-1000 hover:duration-200 ease hover:ease-in-out':
 									!imageData,
 							})}
-							onMouseEnter={() => handleMouseEnter(key)}
-							onMouseLeave={handleMouseLeave}
-							style={{
-								boxShadow: isHovered === key && imageData ? `0 0 30px ${imageData.color}` : undefined,
-								transition: imageData ? `box-shadow ${isHovered === key ? '0.3s' : '0.9s'} ease-in-out` : undefined,
-							}}
+							style={
+								{
+									'--card-color': imageData?.color,
+								} as React.CSSProperties
+							}
 						>
 							{imageData && (
 								<Image
@@ -133,6 +129,7 @@ function MySkills() {
 									height={50}
 									src={imageData.image}
 									alt={imageData.alt}
+									className='select-none'
 									style={{
 										userSelect: 'none',
 										filter: `drop-shadow(0 0 .8rem color-mix(in srgb, ${imageData.color} 40%, transparent))`,
@@ -144,7 +141,7 @@ function MySkills() {
 				})}
 			</div>
 		));
-	}, [width, isHovered]);
+	}, [width]);
 
 	return (
 		<section className='relative min-h-screen flex flex-col' aria-hidden={true} id='skills'>
