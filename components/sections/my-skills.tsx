@@ -98,7 +98,6 @@ function MySkills() {
 
 	const handleMouseEnter = (key: string) => setIsHovered(key);
 	const handleMouseLeave = () => setIsHovered('');
-
 	const gridItems = useMemo(() => {
 		return Array.from({
 			length: width > 620 ? 5 : width < 620 && width > 450 ? 7 : 9,
