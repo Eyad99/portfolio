@@ -9,6 +9,7 @@ const Cubeta = () => {
     {
       logo: rushLogo.src,
       title: "Rush",
+      link: "rush",
       url: "https://lb-merchant.redrush.co/",
     },
   ];

@@ -52,7 +52,15 @@ const StreetLeagueDashboard = () => {
       </Carousel>
 
       <div className="w-[90%] text-lg flex flex-col gap-2">
-        <p>Street League Dashbaord is a platform .</p>
+        <p>
+          Designed a multi-vendor e-commerce dashboard for a football-centric
+          platform, allowing seamless management of product listings,
+          transactions, ground bookings, and user participation in events. The
+          dashboard includes sections for payment tracking, inventory
+          management, and a custom design interface for personalized sportswear,
+          streamlining all aspects of the football merchandise and activity
+          experience.
+        </p>
         <Paginate text="Next Project" link="/company/go-dev/audio-analysis" />
       </div>
     </div>

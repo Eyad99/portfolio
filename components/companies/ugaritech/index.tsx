@@ -9,7 +9,7 @@ const Ugaritech = () => {
     {
       logo: guidanceLogo.src,
       title: "Guidance",
-      link: "on hold",
+      link: "guidance",
     },
   ];
   return (

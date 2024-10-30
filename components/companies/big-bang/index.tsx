@@ -9,6 +9,7 @@ const BigBang = () => {
     {
       logo: dticLogo.src,
       title: "Dtic",
+      link: "dtic",
       url: "https://dtic.co/",
     },
   ];
