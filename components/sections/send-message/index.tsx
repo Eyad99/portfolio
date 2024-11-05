@@ -40,7 +40,7 @@ function SendMessage() {
 
 	const formSchema = yup.object().shape({
 		name: yup.string().required(`Name is required`),
-		email: yup.string().required(`email address is required`),
+		email: yup.string().required(`Email address is required`),
 		message: yup.string().required(`Message is required`),
 	});
 
@@ -68,11 +68,10 @@ function SendMessage() {
 							id='name'
 							name='name'
 							placeholder='Enter your name'
-							className='md:h-[3rem]'
+							className={!!touched.name && !!errors.name ? 'md:h-[3rem] border-red-500 animate-shake' : 'md:h-[3rem]'}
 							onChange={handleChange}
 							onBlur={handleBlur}
 						/>
-						{!!touched.name && !!errors.name && <Label className='ml-1.5 text-red-500'>{touched.name && errors.name}</Label>}
 					</div>
 
 					<div className='col-span-2 md:col-span-1 flex flex-col gap-2'>
@@ -84,11 +83,10 @@ function SendMessage() {
 							id='email'
 							name='email'
 							placeholder='Enter your email'
-							className='md:h-[3rem]'
+							className={!!touched.email && !!errors.email ? 'md:h-[3rem] border-red-500 animate-shake' : 'md:h-[3rem]'}
 							onChange={handleChange}
 							onBlur={handleBlur}
 						/>
-						{!!touched.email && !!errors.email && <Label className='ml-1.5 text-red-500'>{touched.email && errors.email}</Label>}
 					</div>
 
 					<div className='col-span-2 flex flex-col gap-2'>
@@ -96,14 +94,15 @@ function SendMessage() {
 							Your message
 						</Label>
 						<Textarea
-							className='resize-none md:h-[5rem]'
+							className={
+								!!touched.message && !!errors.message ? 'resize-none md:h-[5rem] border-red-500 animate-shake' : 'resize-none md:h-[5rem]'
+							}
 							placeholder='Hi, I believe we should implement a design system for our products at Company X. How soon would you be available for a meeting to discuss this further?'
 							id='message'
 							name='message'
 							onChange={handleChange}
 							onBlur={handleBlur}
 						/>
-						{!!touched.message && !!errors.message && <Label className='ml-1.5 text-red-500'>{touched.message && errors.message}</Label>}
 					</div>
 				</div>
 				<div className='flex justify-center'>
