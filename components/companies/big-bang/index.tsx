@@ -1,8 +1,8 @@
 import React from 'react';
-import ProjectCard from '../../reusable-components/project-card';
-import { Project } from '@/core';
+import ProjectCard from '@/components/reusable-components/project-card';
 import dticLogo from '@/assets/img/dtic.png';
 import Paginate from '@/components/reusable-components/paginate';
+import { Project } from '@/core';
 
 const BigBang = () => {
 	const projects: Project[] = [
@@ -13,7 +13,6 @@ const BigBang = () => {
 			url: 'https://dtic.co/',
 		},
 	];
-	console.log('TEST');
 
 	return (
 		<section className={`flex flex-col justify-center m-auto sm:w-[75%] w-full p-6 gap-10`} aria-hidden={true}>
@@ -29,7 +28,11 @@ const BigBang = () => {
 					<ProjectCard key={index} project={project} />
 				))}
 			</div>
-			<Paginate text='Next Company' link='/company/go-dev' />
+
+			<div className='flex justify-between'>
+				<Paginate direction='left' text='Previous Company' link='/company/cubeta' />
+				<Paginate text='Next Company' link='/company/go-dev' />
+			</div>
 		</section>
 	);
 };
