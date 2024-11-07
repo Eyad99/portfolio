@@ -1,6 +1,9 @@
+// 'use client';
 import { Separator } from '@radix-ui/react-separator';
 import Link from 'next/link';
 import React from 'react';
+import { Linkedin, Github, Globe, Twitter } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
 	return (
@@ -41,6 +44,20 @@ const Footer = () => {
 
 			<div className='lg:px-[10rem] px-12 flex justify-between sm:flex-row flex-col lg:gap-0 gap-4'>
 				<span className='sm:block hidden'>© {new Date().getFullYear()} Eyad Sharaf Almasri.</span>
+				{/* <div className='flex space-x-4'>
+					<motion.a href='#' target='_blank' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+						<Linkedin className='text-[#a0a0a0] hover:text-white transition-colors' />
+					</motion.a>
+					<motion.a href='#' target='_blank' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+						<Github className='text-[#a0a0a0] hover:text-white transition-colors' />
+					</motion.a>
+					<motion.a href='#' target='_blank' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+						<Globe className='text-[#a0a0a0] hover:text-white transition-colors' />
+					</motion.a>
+					<motion.a href='#' target='_blank' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+						<Twitter className='text-[#a0a0a0] hover:text-white transition-colors' />
+					</motion.a>
+				</div> */}
 				<div className='flex gap-6'>
 					<Link
 						href='https://www.linkedin.com/in/eyad-sharaf-almasri-16b217213/'
