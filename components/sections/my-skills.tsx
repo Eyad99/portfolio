@@ -151,7 +151,7 @@ function MySkills() {
 				</p>
 			</div>
 			<section
-				className='mt-28 relative overflow-hidden'
+				className='mt-24 relative overflow-hidden'
 				style={{
 					maskImage: `linear-gradient(180deg, transparent 0%, #ffffff 200px, #ffffff calc(100vh - 300px), transparent 100%)`,
 				}}
