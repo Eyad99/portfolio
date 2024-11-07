@@ -2,13 +2,13 @@
 
 import { LoaderIcon, Send } from 'lucide-react';
 import { useFormik } from 'formik';
+import { useToast } from '@/hooks/use-toast';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@radix-ui/react-label';
 import emailjs from '@emailjs/browser';
 import * as yup from 'yup';
-import { useToast } from '@/hooks/use-toast';
 
 const ContactMeForm = ({ formClassName, buttonCentering }: { formClassName?: string; buttonCentering?: boolean }) => {
 	const { toast } = useToast();

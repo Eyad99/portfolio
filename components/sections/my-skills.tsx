@@ -1,7 +1,7 @@
 'use client';
 
 import { useMemo } from 'react';
-import { useWindowWidth } from '@/hocs/useWindowWidth';
+import { useWindowWidth } from '@/hooks/useWindowWidth';
 import { cn } from '@/lib/utils';
 
 import Image from 'next/image';
