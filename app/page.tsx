@@ -23,6 +23,7 @@ export default function Home() {
 			<div className='snap-always snap-center'>
 				<SendMessage />
 			</div>
+
 			<div className='snap-always snap-center'>
 				<Footer />
 			</div>
