@@ -1,3 +1,4 @@
+import Intro from '@/components/sections/intro';
 import MySkills from '@/components/sections/my-skills';
 import MyWorks from '@/components/sections/my-works';
 import Panner from '@/components/sections/panner';
@@ -8,25 +9,29 @@ import { Fragment } from 'react';
 export default function Home() {
 	return (
 		<Fragment>
-			<div className='snap-always snap-center'>
-				<Panner />
-			</div>
+			<Intro />
 
-			<div className='snap-always snap-center'>
-				<MySkills />
-			</div>
+			<section id='main'>
+				<div className='snap-always snap-center'>
+					<Panner />
+				</div>
 
-			<div className='snap-always snap-center'>
-				<MyWorks />
-			</div>
+				<div className='snap-always snap-center'>
+					<MySkills />
+				</div>
 
-			<div className='snap-always snap-center'>
-				<SendMessage />
-			</div>
+				<div className='snap-always snap-center'>
+					<MyWorks />
+				</div>
 
-			<div className='snap-always snap-center'>
-				<Footer />
-			</div>
+				<div className='snap-always snap-center'>
+					<SendMessage />
+				</div>
+
+				<div className='snap-always snap-center'>
+					<Footer />
+				</div>
+			</section>
 		</Fragment>
 	);
 }
