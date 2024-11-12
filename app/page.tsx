@@ -4,14 +4,14 @@ import MyWorks from '@/components/sections/my-works';
 import Panner from '@/components/sections/panner';
 import SendMessage from '@/components/sections/send-message';
 import Footer from '@/components/widgets/footer';
+import { IntroProvider } from '@/hooks/intro-context';
 import { Fragment } from 'react';
 
 export default function Home() {
 	return (
-		<Fragment>
+		<IntroProvider>
 			<Intro />
-
-			<section id='main'>
+			<section>
 				<div className='snap-always snap-center'>
 					<Panner />
 				</div>
@@ -32,6 +32,6 @@ export default function Home() {
 					<Footer />
 				</div>
 			</section>
-		</Fragment>
+		</IntroProvider>
 	);
 }

@@ -1,50 +1,133 @@
 'use client';
 
-import React, { useLayoutEffect, useRef } from 'react';
-import gsap from 'gsap';
-
+import { useIntro } from '@/hooks/intro-context';
 import { useGSAP } from '@gsap/react';
+import { useRef } from 'react';
+import { gsap } from 'gsap';
 
 gsap.registerPlugin(useGSAP);
 
-const Intro = () => {
-	const container = useRef<any>();
+const PARTICLE_COUNT = 100;
+const COLORS = ['#252A1F', '#37402E', '#566247', '#A4B092'];
+
+interface Particle {
+	x: number;
+	y: number;
+	radius: number;
+	color: string;
+	vx: number;
+	vy: number;
+}
+
+export default function Intro() {
+	const { introFinished, setIntroFinished } = useIntro();
+
+	const canvasRef = useRef<HTMLCanvasElement>(null);
+	const particlesRef = useRef<Particle[]>([]);
+	const introRef = useRef<HTMLDivElement>(null);
 
 	useGSAP(
 		() => {
-			const t1 = gsap.timeline();
-			t1.from('#intro-slider', { xPercent: '-100', duration: 1.3, delay: 0.3 })
-				.from(['#text-one', '#text-tow', '#text-three'], {
-					opacity: 0,
-					y: '+=30',
-					stagger: 0.5,
-				})
-				.to(['#text-one', '#text-tow', '#text-three'], {
-					opacity: 0,
-					y: '-=30',
-					delay: 0.3,
-					stagger: 0.5,
-				})
-				.to('#intro-slider', { xPercent: '-100', duration: 1.3 })
-				.from('#main', { opacity: 0, delay: 0.5 });
-		},
-		{ scope: container }
-	);
-	return (
-		<section className='relative' ref={container}>
-			<section className='h-screen absolute top-0 left-0 z-[60] w-full flex flex-col gap-10 p-10 bg-secondary' id='intro-slider'>
-				<h1 className='text-9xl' id='text-one'>
-					Software Engineer
-				</h1>
-				<h1 className='text-9xl' id='text-tow'>
-					Frontend Developer
-				</h1>
-				<h1 className='text-9xl' id='text-three'>
-					Freelancer
-				</h1>
-			</section>
-		</section>
-	);
-};
+			const canvas = canvasRef.current;
+			const ctx = canvas?.getContext('2d');
+			if (!canvas || !ctx) return;
 
-export default Intro;
+			const resizeCanvas = () => {
+				canvas.width = window.innerWidth;
+				canvas.height = window.innerHeight;
+			};
+
+			resizeCanvas();
+			window.addEventListener('resize', resizeCanvas);
+
+			// Initialize particles
+			for (let i = 0; i < PARTICLE_COUNT; i++) {
+				particlesRef.current.push({
+					x: Math.random() * canvas.width,
+					y: Math.random() * canvas.height,
+					radius: Math.random() * 2 + 1,
+					color: COLORS[Math.floor(Math.random() * COLORS.length)],
+					vx: (Math.random() - 0.5) * 2,
+					vy: (Math.random() - 0.5) * 2,
+				});
+			}
+
+			// Animation function for particles
+			const animateParticles = () => {
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+				particlesRef.current.forEach((particle) => {
+					particle.x += particle.vx;
+					particle.y += particle.vy;
+
+					if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+					if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+
+					ctx.beginPath();
+					ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
+					ctx.fillStyle = particle.color;
+					ctx.fill();
+				});
+
+				requestAnimationFrame(animateParticles);
+			};
+
+			animateParticles();
+
+			// Timeline animation
+			const tl = gsap.timeline({
+				onComplete: () => {
+					gsap.to(introRef.current, {
+						opacity: 0,
+						duration: 1,
+						ease: 'power2.inOut',
+						onComplete: () => {
+							setIntroFinished(true);
+						},
+					});
+				},
+			});
+
+			tl.to(particlesRef.current, {
+				duration: 2,
+				x: canvas.width / 2,
+				y: canvas.height / 2,
+				ease: 'power3.inOut',
+				stagger: {
+					from: 'random',
+					amount: 1,
+				},
+			}).to(
+				particlesRef.current,
+				{
+					duration: 1,
+					// opacity: 0,
+					ease: 'power2.in',
+					stagger: {
+						from: 'random',
+						amount: 0.5,
+					},
+				},
+				'-=0.5'
+			);
+
+			// Cleanup
+			return () => {
+				window.removeEventListener('resize', resizeCanvas);
+			};
+		},
+		{ scope: introRef }
+	);
+
+	return (
+		<>
+			{!introFinished && (
+				<div ref={introRef} className={`fixed inset-0 bg-primary flex flex-col items-center justify-center z-50`}>
+					<canvas ref={canvasRef} className='absolute inset-0' />
+					<h1 className='text-4xl md:text-6xl font-bold text-white mb-4 relative z-10'>Eyad Sharaf Almasri</h1>
+					<p className='text-2xl relative z-10'>Frontend Developer</p>
+				</div>
+			)}
+		</>
+	);
+}

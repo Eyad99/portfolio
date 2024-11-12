@@ -55,7 +55,7 @@ const ImagesObj: {
 	js: { image: jsIcon, alt: 'jsIcon', color: '#FDD24F' },
 };
 
-function MySkills() {
+function 	MySkills() {
 	const width = useWindowWidth();
 	const images: { [key: string]: { image: any; alt: string; color: string } } = useMemo(() => {
 		const getKey = (breakpoints: number[], indices: string[]): string => {
