@@ -112,7 +112,10 @@ const ContactMeForm = ({ formClassName, buttonCentering }: { formClassName?: str
 			</div>
 			<div className={`flex ${buttonCentering ? 'justify-center' : ''}`}>
 				<Button
-					className='w-[30%] hover:before:bg-redborder-[#3C3D37] relative h-[50px] overflow-hidden border border-[#3C3D37]  px-3 text-[#3C3D37] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-[#3C3D37] before:transition-all before:duration-500 hover:text-white hover:shadow-[#3C3D37] hover:before:left-0 hover:before:w-full '
+					className='w-[30%] hover:before:bg-[#3C3D37] relative h-[50px] overflow-hidden border border-[#3C3D37] px-3
+					 text-[#3C3D37] transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0
+					  before:bg-[#3C3D37] before:transition-all before:duration-500 hover:text-white hover:shadow-[#3C3D37] hover:before:left-0
+					   hover:before:w-full '
 					variant={'outline'}
 					disabled={values.loading}
 				>

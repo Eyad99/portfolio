@@ -68,7 +68,7 @@ const Header = () => {
 			{/* Header content */}
 			<div className='flex justify-between items-center px-12 py-6 w-full '>
 				<Link href={'/'}>
-					<h1 className='text-xl font-bold cursor-pointer'>ES LOGO</h1>
+					<h1 className='text-xl font-bold cursor-pointer font-agustina'>Eyad Sharaf Amasri</h1>
 				</Link>
 				<button onClick={toggleMenu} className='z-50' aria-label='Toggle menu'>
 					{isMenuOpen ? <X size={32} /> : <Menu size={32} />}
