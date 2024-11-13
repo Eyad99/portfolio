@@ -22,6 +22,7 @@ const Guidance = () => {
 				'Designed to boost student engagement, this project features interactive tools like discussion forums, peer-to-peer messaging, and group collaboration spaces. It includes a flexible user role management system with customizable permissions for administrators, instructors, and students. The platform also supports a file management system and enables seamless reuse of shareable content from various e-learning platforms through SCORM packages.'
 			}
 			imagesEmun={ImagesEmun}
+			technologies={['Vite', 'React Query', 'Redux', 'Tailwind Css', 'Shadcn', 'Firebase', 'Pusher', 'ChartJs', 'Docker']}
 		/>
 	);
 };

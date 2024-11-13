@@ -10,6 +10,7 @@ const Dtic = () => {
 			}
 			imagesEmun={[]}
 			website={{ link: 'https://dtic.co/', name: 'Dtic website' }}
+			technologies={['NextJs', 'Redux Toolkit', 'Ant Design']}
 		/>
 	);
 };

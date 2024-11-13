@@ -5,7 +5,6 @@ import Panner from '@/components/sections/panner';
 import SendMessage from '@/components/sections/send-message';
 import Footer from '@/components/widgets/footer';
 import { IntroProvider } from '@/hooks/intro-context';
-import { Fragment } from 'react';
 
 export default function Home() {
 	return (

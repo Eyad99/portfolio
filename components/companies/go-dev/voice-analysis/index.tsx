@@ -25,6 +25,7 @@ const VoiceAnalysis = () => {
 			}
 			imagesEmun={ImagesEmun}
 			paginate={{ nextProjectLink: '/company/go-dev/street-league', prevProjectLink: '/company/go-dev/street-league-dashboard' }}
+			technologies={['Vite', 'React Query', 'Tailwind Css', 'Shadcn']}
 		/>
 	);
 };

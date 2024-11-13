@@ -5,6 +5,7 @@ import ContactTogetherSection from '@/components/sections/send-message/contact-t
 import Paginate from '@/components/reusable-components/paginate';
 import Image from 'next/image';
 import Link from 'next/link';
+import Technologies from './technologies';
 
 interface ProjectDetailsProps {
 	projectName: string;
@@ -12,9 +13,10 @@ interface ProjectDetailsProps {
 	imagesEmun: { image: any; alt: string }[];
 	website?: { link: any; name: string };
 	paginate?: { nextProjectLink?: string; prevProjectLink?: string };
+	technologies: string[];
 }
 
-const ProjectDetails: FC<ProjectDetailsProps> = ({ projectName, projectDescription, imagesEmun, website, paginate }) => {
+const ProjectDetails: FC<ProjectDetailsProps> = ({ projectName, projectDescription, imagesEmun, website, paginate, technologies }) => {
 	return (
 		<div className='flex flex-col justify-center items-center sm:m-28 m-10 gap-16'>
 			<h1 className='font-bold text-4xl '>{projectName}</h1>
@@ -36,15 +38,16 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({ projectName, projectDescripti
 				<CarouselPrevious />
 				<CarouselNext />
 			</Carousel>
-			<div className='w-[90%] text-lg flex flex-col gap-2'>
+			<div className='w-[90%] text-lg flex flex-col gap-4'>
 				<p>
-					{projectDescription}{' '}
+					{projectDescription}
 					{website?.link && (
-						<Link href='https://streetleague.ae/' target='blank' passHref>
+						<Link href={website?.link} target='blank' passHref>
 							<span className='text-blue-500 hover:underline'>{website.name}</span>
 						</Link>
 					)}
 				</p>
+				<Technologies technologies={technologies} />
 				{(paginate?.nextProjectLink || paginate?.prevProjectLink) && (
 					<div className='flex justify-between'>
 						{paginate?.prevProjectLink && <Paginate direction='left' text='Previous Project' link={paginate.prevProjectLink} />}

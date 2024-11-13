@@ -26,6 +26,7 @@ const Rush = () => {
 			}
 			imagesEmun={ImagesEmun}
 			website={{ link: 'https://lb-merchant.redrush.co/', name: 'Rush website' }}
+			technologies={['NextJs', 'Redux Toolkit', 'Ant Design']}
 		/>
 	);
 };

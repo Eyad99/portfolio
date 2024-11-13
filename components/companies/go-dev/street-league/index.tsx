@@ -21,11 +21,12 @@ const StreetLeague = () => {
 		<ProjectDetails
 			projectName={'StreetLeague'}
 			projectDescription={
-				'Street League is a platform centered around competitive sports leagues and events. It offers a space for teams and players to engage in various sports competitions. The site provides registration options, event details, and access to their shop for sports	gear and accessories. Additionally, users can follow updates and connect with the community through the platform. It also offers downloadable apps for easy access to schedules, results, and other relevant information. For more details,you can visit'
+				'Street League is a platform centered around competitive sports leagues and events. It offers a space for teams and players to engage in various sports competitions. The site provides registration options, event details, and access to their shop for sports	gear and accessories. Additionally, users can follow updates and connect with the community through the platform. It also offers downloadable apps for easy access to schedules, results, and other relevant information. For more details,you can visit '
 			}
 			imagesEmun={ImagesEmun}
 			website={{ link: 'https://streetleague.ae/', name: "Street League's website" }}
 			paginate={{ nextProjectLink: '/company/go-dev/street-league-dashboard', prevProjectLink: '/company/go-dev/audio-analysis' }}
+			technologies={['NextJs', 'React Query', 'Mui', 'Firebase', 'Pusher', 'Stripe', 'Tabby']}
 		/>
 	);
 };

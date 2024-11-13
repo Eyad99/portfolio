@@ -25,6 +25,7 @@ const StreetLeagueDashboard = () => {
 			}
 			imagesEmun={ImagesEmun}
 			paginate={{ nextProjectLink: '/company/go-dev/audio-analysis', prevProjectLink: '/company/go-dev/street-league' }}
+			technologies={['NextJs', 'React Query', 'Mui', 'Firebase', 'ChartJs']}
 		/>
 	);
 };
