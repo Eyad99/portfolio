@@ -14,10 +14,10 @@ export default function Home() {
 				<div className='snap-always snap-center'>
 					<Panner />
 				</div>
-
+				{/* 
 				<div className='snap-always snap-center'>
 					<MySkills />
-				</div>
+				</div> */}
 
 				<div className='snap-always snap-center'>
 					<MyWorks />
