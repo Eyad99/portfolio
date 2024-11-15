@@ -141,7 +141,7 @@ function MySkills() {
 				})}
 			</div>
 		));
-	}, [width]);
+	}, []);
 
 	return (
 		<section className='relative min-h-screen flex flex-col' aria-hidden={true} id='skills'>

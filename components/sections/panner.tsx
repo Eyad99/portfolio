@@ -84,13 +84,13 @@ export default function Panner() {
 			</motion.div>
 
 			{/* Right side */}
-			<div className='lg:w-[32%] w-[100%] bg-[#F5F5F5] p-12 relative'>
+			<motion.div variants={containerVariants} className='lg:w-[32%] w-[100%] bg-[#F5F5F5] p-12 relative'>
 				<div className='h-full flex items-center justify-center'>
-					<div className='w-80 h-80 bg-gray-300 rounded-full overflow-hidden'>
+					<motion.div variants={itemVariants} className='w-80 h-80 bg-gray-300 rounded-full overflow-hidden'>
 						<Image src={person} alt='Frontend Developer' className='w-full h-full object-cover' />
-					</div>
+					</motion.div>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	);
 }
