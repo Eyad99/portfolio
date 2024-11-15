@@ -49,7 +49,13 @@ export default function Panner() {
 									before:transition-all before:duration-500 before:w-0 hover:before:w-full
 									hover:text-primary'
 							>
-								<div className='flex justify-between items-center gap-4 relative z-10'>
+								<div
+									className='flex justify-between items-center gap-4 relative z-10'
+									onClick={(event: any) => {
+										event.preventDefault();
+										window.open('/resume.pdf', '_blank');
+									}}
+								>
 									<FileText />
 									<span className='sm:text-[16px] text-[12px]'>See My Resume</span>
 								</div>

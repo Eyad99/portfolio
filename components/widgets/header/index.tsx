@@ -116,7 +116,7 @@ const Header = () => {
 									</Link>
 								</motion.a>
 								<motion.a
-									href='@/assets/pdf/resume.pdf'
+									href='/resume.pdf'
 									variants={itemVariants}
 									className='block text-4xl font-light hover:text-primary transition-colors'
 									target='_blank'

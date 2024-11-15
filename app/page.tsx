@@ -9,7 +9,7 @@ import { IntroProvider } from '@/hooks/intro-context';
 export default function Home() {
 	return (
 		<IntroProvider>
-			<Intro />
+			{/* <Intro /> */}
 			<section>
 				<div className='snap-always snap-center'>
 					<Panner />
