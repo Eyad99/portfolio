@@ -29,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
-				<main className='snap-y snap-mandatory overflow-y-scroll h-screen scrollbar'>
+				<main className='md:snap-y md:snap-mandatory overflow-y-scroll h-screen scrollbar'>
 					<Header />
 					{children}
 					<RouadMap />

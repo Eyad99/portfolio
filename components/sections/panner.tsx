@@ -26,7 +26,7 @@ export default function Panner() {
 		},
 	};
 	return (
-		<div className='flex min-h-screen lg:flex-row flex-col' id='panner'>
+		<div className='flex min-h-screen lg:flex-row flex-col'>
 			{/* Left side */}
 			<motion.div
 				initial='hidden'
