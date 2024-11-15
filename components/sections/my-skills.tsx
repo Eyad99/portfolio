@@ -144,7 +144,7 @@ function MySkills() {
 	}, []);
 
 	return (
-		<section className='relative min-h-screen flex flex-col' aria-hidden={true}>
+		<section className='relative min-h-screen flex flex-col'>
 			<div className='w-full flex justify-center absolute top-20'>
 				<p className='z-10 font-bold text-center lg:w-[60%] md:w-[80%] w-full lg:text-3xl sm:text-2xl text-xl'>
 					Empowering projects with advanced skills in modern frameworks and tools

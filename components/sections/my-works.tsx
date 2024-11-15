@@ -42,7 +42,7 @@ const companies: Project[] = [
 
 function MyWorks() {
 	return (
-		<section className={`relative min-h-screen flex flex-col items-center bg-primary`} aria-hidden={true}>
+		<section className={`relative min-h-screen flex flex-col items-center bg-primary`}>
 			<div className='sm:w-[80%] w-full flex flex-col mt-28 px-12  '>
 				<h1 className='text-4xl font-bold text-center mb-8'>A collection of companies that have worked with them</h1>
 

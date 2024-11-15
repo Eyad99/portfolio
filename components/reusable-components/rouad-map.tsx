@@ -49,6 +49,7 @@ const RouadMap = () => {
 								}}
 							>
 								<div
+									aria-label={`${id}`}
 									className={`transition-all duration-300 ${
 										activeSection === id
 											? `w-[2vh] h-[2vh]  ${
