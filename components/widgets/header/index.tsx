@@ -99,6 +99,7 @@ const Header = () => {
 										onClick={(e) => {
 											path === '/' && e.preventDefault();
 											path === '/' && document.getElementById('panner')?.scrollIntoView({ behavior: 'smooth' });
+											toggleMenu();
 										}}
 									>
 										Home
@@ -110,6 +111,7 @@ const Header = () => {
 										onClick={(e) => {
 											path === '/' && e.preventDefault();
 											path === '/' && document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' });
+											toggleMenu();
 										}}
 									>
 										Work

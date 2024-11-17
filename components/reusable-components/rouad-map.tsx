@@ -6,7 +6,6 @@ import React, { useEffect, useState } from 'react';
 const RouadMap = () => {
 	const pathname = usePathname();
 	const [activeSection, setActiveSection] = useState('panner');
-
 	useEffect(() => {
 		const sections = ['panner', 'skills', 'works', 'contact', 'footer'];
 		const observers = [] as any;
