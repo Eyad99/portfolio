@@ -33,7 +33,7 @@ const Footer = () => {
 					/>
 				))}
 			</div>
-			<div className='flex flex-col gap-6 md:mt-28 mt-14 lg:px-[10rem] px-12 py-[4rem] leading-[3rem]'>
+			<div className='flex flex-col gap-6 md:py-[4rem] py-[4rem] leading-[3rem] md:mt-28 mt-12 lg:px-[10rem] md:px-12 px-6'>
 				<motion.h1
 					initial={{ opacity: 0, y: -20 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -109,12 +109,12 @@ const Footer = () => {
 				initial={{ opacity: 0, x: -20 }}
 				animate={{ opacity: 1, x: 0 }}
 				transition={{ duration: 0.5, delay: 0.2 }}
-				className='lg:px-[10rem] px-12 mt-[8rem] mb-[4rem]'
+				className='mt-[8rem] mb-[4rem] lg:px-[10rem] md:px-12 px-6'
 			>
 				<Separator orientation='vertical' className='h-[1px] bg-secondary' />
 			</motion.div>
 
-			<div className='lg:px-[10rem] px-12 flex justify-between sm:flex-row flex-col lg:gap-0 gap-4'>
+			<div className='flex justify-between sm:flex-row flex-col lg:gap-0 gap-4 lg:px-[10rem] md:px-12 px-6'>
 				<motion.span
 					initial={{ opacity: 0, x: -20 }}
 					animate={{ opacity: 1, x: 0 }}

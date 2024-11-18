@@ -32,7 +32,7 @@ export default function Panner() {
 				initial='hidden'
 				animate='visible'
 				variants={containerVariants}
-				className='lg:w-[68%] w-full bg-[#181C14] p-12 flex flex-col justify-between gap-[6rem]'
+				className='lg:w-[68%] w-full bg-[#181C14] md:p-12 p-6 flex flex-col justify-between gap-[6rem]'
 			>
 				<div className='lg:mt-28 mt-14'>
 					<motion.h1 variants={itemVariants} className='lg:text-6xl text-3xl font-bold mb-8'>

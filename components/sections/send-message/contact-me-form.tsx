@@ -100,7 +100,9 @@ const ContactMeForm = ({ formClassName, buttonCentering }: { formClassName?: str
 					</Label>
 					<Textarea
 						className={
-							!!touched.message && !!errors.message ? 'resize-none md:h-[5rem] border-primary animate-shake' : 'resize-none md:h-[5rem]'
+							!!touched.message && !!errors.message
+								? 'resize-none md:h-[5rem] h-[7rem] border-primary animate-shake'
+								: 'resize-none md:h-[5rem] h-[7rem]'
 						}
 						placeholder='Hi, I believe we should implement a design system for our products at Company X. How soon would you be available for a meeting to discuss this further?'
 						name='message'
