@@ -135,16 +135,35 @@ const Footer = () => {
 						target='_blank'
 						whileHover={{ scale: 1.2 }}
 						whileTap={{ scale: 0.9 }}
+						aria-label='linkedin'
 					>
 						<Linkedin className='text-secondary hover:text-[#697565] transition-colors' />
 					</motion.a>
-					<motion.a href='https://github.com/Eyad99' target='_blank' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+					<motion.a
+						href='https://github.com/Eyad99'
+						target='_blank'
+						whileHover={{ scale: 1.2 }}
+						whileTap={{ scale: 0.9 }}
+						aria-label='github'
+					>
 						<Github className='text-secondary hover:text-[#697565] transition-colors' />
 					</motion.a>
-					<motion.a href='https://gitlab.com/iead.sh123' target='_blank' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+					<motion.a
+						href='https://gitlab.com/iead.sh123'
+						target='_blank'
+						whileHover={{ scale: 1.2 }}
+						whileTap={{ scale: 0.9 }}
+						aria-label='gitlab'
+					>
 						<Gitlab className='text-secondary hover:text-[#697565] transition-colors' />
 					</motion.a>
-					<motion.a href='https://x.com/EyadSharaaf' target='_blank' whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }}>
+					<motion.a
+						href='https://x.com/EyadSharaaf'
+						target='_blank'
+						whileHover={{ scale: 1.2 }}
+						whileTap={{ scale: 0.9 }}
+						aria-label='twitter'
+					>
 						<Twitter className='text-secondary hover:text-[#697565] transition-colors' />
 					</motion.a>
 				</motion.div>
