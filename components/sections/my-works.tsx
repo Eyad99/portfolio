@@ -56,8 +56,12 @@ function MyWorks() {
 							<div key={index} className='bg-[#2A2E23] rounded-lg p-6 flex flex-col group'>
 								<Link href={`/company/${company.link}`} passHref>
 									<div
-										className={`flex items-center justify-center w-16 h-16 p-2 rounded-lg bg-[#242B1D] mb-4`}
-										style={{ filter: `drop-shadow(0 0 8px ${company.shadow})` }}
+										className='flex items-center justify-center w-16 h-16 p-2 rounded-lg bg-[#242B1D] mb-4 group-hover:drop-shadow-[--company-drop-shadow]'
+										style={
+											{
+												'--company-drop-shadow': `0 0 8px ${company.shadow}`,
+											} as React.CSSProperties
+										}
 									>
 										<Image
 											src={company.logo}
