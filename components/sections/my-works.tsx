@@ -56,7 +56,7 @@ function MyWorks() {
 							<div key={index} className='bg-[#2A2E23] rounded-lg p-6 flex flex-col group'>
 								<Link href={`/company/${company.link}`} passHref>
 									<div
-										className='flex items-center justify-center w-16 h-16 p-2 rounded-lg bg-[#242B1D] mb-4 group-hover:drop-shadow-[--company-drop-shadow]'
+										className='flex items-center justify-center w-16 h-16 p-2 rounded-lg bg-[#242B1D] mb-4 transition-all duration-500 group-hover:drop-shadow-[--company-drop-shadow]'
 										style={
 											{
 												'--company-drop-shadow': `0 0 8px ${company.shadow}`,
@@ -72,7 +72,7 @@ function MyWorks() {
 										/>
 									</div>
 									<h3
-										className='text-xl font-semibold text-white mb-2 group-hover:text-[--company-name-color] '
+										className='text-xl font-semibold text-white mb-2  transition-all duration-500 group-hover:text-[--company-name-color] '
 										style={
 											{
 												'--company-name-color': company.shadow,
