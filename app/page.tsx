@@ -20,6 +20,7 @@ export default function Home() {
 					<MySkills />
 				</div>
 */}
+
 				<div className='md:snap-always md:snap-center' id='works'>
 					<MyWorks />
 				</div>
