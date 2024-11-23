@@ -99,9 +99,9 @@ import React from 'react';
 
 const Panner = () => {
 	return (
-		<div className='container-xl flex min-h-screen lg:flex-row flex-col'>
-			<h1 className='text-4xl text-bold md:p-12 '>Panner</h1>
-		</div>
+		<section className={`relative min-h-screen bg-primary`}>
+			<div className='container mx-auto px-6 lg:px-12 xl:px-[10rem] flex flex-col'></div>
+		</section>
 	);
 };
 

@@ -1,8 +1,8 @@
 'use client';
-import { Separator } from '@radix-ui/react-separator';
-import Link from 'next/link';
 import React from 'react';
+import Link from 'next/link';
 import { Linkedin, Github, Twitter, ArrowRight, Mail, MessageSquare, Gitlab } from 'lucide-react';
+import { Separator } from '@radix-ui/react-separator';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -36,7 +36,7 @@ const Footer = () => {
 					))}
 				</div>
 
-				<div className='flex flex-col gap-6 md:py-[4rem] py-[4rem] leading-[3rem] md:mt-28 mt-12'>
+				<div className='flex flex-col gap-6 sm:py-[4rem] py-[4rem] leading-[3rem] sm:mt-28 mt-12'>
 					<motion.h1
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -112,12 +112,12 @@ const Footer = () => {
 					initial={{ opacity: 0, x: -20 }}
 					animate={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.5, delay: 0.2 }}
-					className='mt-[8rem] mb-[4rem]'
+					className='mt-[8rem] sm:mb-[4rem] mb-[2rem]'
 				>
 					<Separator orientation='vertical' className='h-[1px] bg-secondary' />
 				</motion.div>
 
-				<div className='flex justify-between sm:flex-row flex-col lg:gap-0 gap-4'>
+				<div className='flex justify-between items-center sm:flex-row flex-col lg:gap-0 gap-4 mb-4'>
 					<motion.span
 						initial={{ opacity: 0, x: -20 }}
 						animate={{ opacity: 1, x: 0 }}
@@ -170,6 +170,15 @@ const Footer = () => {
 							<Twitter className='text-secondary hover:text-[#697565] transition-colors' />
 						</motion.a>
 					</motion.div>
+
+					<motion.span
+						initial={{ opacity: 0, x: -20 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ duration: 0.5, delay: 0.2 }}
+						className='block sm:hidden text-secondary'
+					>
+						© {new Date().getFullYear()} Eyad Sharaf Almasri.{' '}
+					</motion.span>
 				</div>
 			</div>
 		</section>
