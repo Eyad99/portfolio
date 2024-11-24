@@ -12,9 +12,9 @@ export default function Home() {
 		<IntroProvider>
 			{/* <Intro /> */}
 			<section>
-				{/* <div className='md:snap-always md:snap-center' id='panner'>
+				<div className='md:snap-always md:snap-center' id='panner'>
 					<Panner />
-				</div> */}
+				</div>
 
 				{/* <div className='md:snap-always md:snap-center' id='skills'>
 					<MySkills />

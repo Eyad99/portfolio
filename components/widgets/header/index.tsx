@@ -66,7 +66,7 @@ const Header = () => {
 	return (
 		<div className='fixed top-0 left-0 w-full z-50'>
 			{/* Header content */}
-			<div className='flex justify-between items-center md:px-12 px-6 py-6 w-full '>
+			<div className='flex justify-between items-center md:px-12 px-6 py-6 w-full'>
 				<Link href={'/'}>
 					<h1 className='text-xl font-bold cursor-pointer font-agustina'>Eyad Sharaf Almasri</h1>
 				</Link>
