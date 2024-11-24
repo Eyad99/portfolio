@@ -41,7 +41,7 @@ const Footer = () => {
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5 }}
-						className='text-4xl font-bold'
+						className='md:text-4xl sm:text-3xl text-2xl font-bold'
 					>
 						SAY HELLO
 					</motion.h1>
@@ -55,7 +55,7 @@ const Footer = () => {
 							<motion.div className='group' whileHover={{ x: 5 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
 								<Link
 									href='mailto:iead.sh123@gmail'
-									className='flex items-center gap-3 text-lg text-secondary hover:text-[#697565] transition-colors'
+									className='flex items-center gap-3 sm:text-xl text-lg text-secondary hover:text-[#697565] transition-colors'
 								>
 									<Mail className='w-6 h-6' />
 									<span>iead.sh123@gmail</span>
@@ -66,7 +66,7 @@ const Footer = () => {
 								<Link
 									href='https://t.me/eyad_sharaf_almasri'
 									target='_blank'
-									className='flex items-center gap-3 text-lg text-secondary hover:text-[#697565] transition-colors'
+									className='flex items-center gap-3 sm:text-xl text-lg text-secondary hover:text-[#697565] transition-colors'
 								>
 									<MessageSquare className='w-6 h-6' />
 									<span>t.me/eyad</span>
@@ -88,7 +88,7 @@ const Footer = () => {
 										e.preventDefault();
 										document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' });
 									}}
-									className='flex items-center gap-3 text-lg text-secondary hover:text-[#697565] transition-colors'
+									className='flex items-center gap-3 sm:text-xl text-lg text-secondary hover:text-[#697565] transition-colors'
 								>
 									<span>My Work</span>
 									<ArrowRight className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
@@ -98,7 +98,7 @@ const Footer = () => {
 								<Link
 									target='_blank'
 									href='/resume.pdf'
-									className='flex items-center gap-3 text-lg text-secondary hover:text-[#697565] transition-colors'
+									className='flex items-center gap-3 sm:text-xl text-lg text-secondary hover:text-[#697565] transition-colors'
 								>
 									<span>My Resume</span>
 									<ArrowRight className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
@@ -122,7 +122,7 @@ const Footer = () => {
 						initial={{ opacity: 0, x: -20 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.5, delay: 0.2 }}
-						className='sm:block hidden text-secondary'
+						className='sm:block hidden text-secondary sm:text-xl text-lg'
 					>
 						© {new Date().getFullYear()} Eyad Sharaf Almasri.{' '}
 					</motion.span>
@@ -175,7 +175,7 @@ const Footer = () => {
 						initial={{ opacity: 0, x: -20 }}
 						animate={{ opacity: 1, x: 0 }}
 						transition={{ duration: 0.5, delay: 0.2 }}
-						className='block sm:hidden text-secondary'
+						className='block sm:hidden text-secondary sm:text-xl text-lg'
 					>
 						© {new Date().getFullYear()} Eyad Sharaf Almasri.{' '}
 					</motion.span>

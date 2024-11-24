@@ -10,16 +10,15 @@ import { IntroProvider } from '@/hooks/intro-context';
 export default function Home() {
 	return (
 		<IntroProvider>
-			{/* <Intro /> */}
+			<Intro />
 			<section>
 				<div className='md:snap-always md:snap-center' id='panner'>
 					<Panner />
 				</div>
 
-				{/* <div className='md:snap-always md:snap-center' id='skills'>
+				<div className='md:snap-always md:snap-center' id='skills'>
 					<MySkills />
 				</div>
-*/}
 
 				<div className='md:snap-always md:snap-center' id='works'>
 					<MyWorks />

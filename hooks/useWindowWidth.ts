@@ -4,7 +4,7 @@ export function useWindowWidth() {
 	const [windowWidth, setWindowWidth] = useState(
 		typeof window !== 'undefined' ? window.innerWidth : 0
 	);
- 	useEffect(() => {
+  	useEffect(() => {
 		if (typeof window === 'undefined') return;  
 
  		function handleResize() {

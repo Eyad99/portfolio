@@ -49,7 +49,7 @@ function MyWorks() {
 		<section className={`min-h-screen bg-primary`}>
 			<div className='container mx-auto flex flex-col items-center'>
 				<div className='sm:w-[80%] w-full flex flex-col md:mt-28 mt-12 md:px-12 px-6'>
-					<h1 className='md:text-4xl text-3xl font-bold text-center mb-8'>A collection of companies that have worked with them</h1>
+					<h1 className='lg:text-3xl text-2xl font-bold text-center mb-8'>A collection of companies that have worked with them</h1>
 
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
 						{companies.map((company, index) => (

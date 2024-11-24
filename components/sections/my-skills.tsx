@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { useWindowWidth } from '@/hooks/useWindowWidth';
 import { cn } from '@/lib/utils';
 
@@ -96,32 +96,29 @@ function MySkills() {
 	}, [width]);
 
 	const gridItems = useMemo(() => {
-		return Array.from({
-			length: width > 620 ? 5 : width < 620 && width > 450 ? 7 : 9,
-		}).map((_, index) => (
+		const rows = width > 620 ? 5 : width > 450 ? 7 : 9;
+		const cols = Math.floor(width / 96);
+
+		return Array.from({ length: rows }).map((_, rowIndex) => (
 			<div
-				key={index}
+				key={rowIndex}
 				className={GridClassName}
 				style={{
-					transform: `translate3d(${index % 2 === 0 ? '-24px' : '24px'}, 0, 0)`,
+					transform: `translate3d(${rowIndex % 2 === 0 ? '-24px' : '24px'}, 0, 0)`,
 				}}
 			>
-				{Array.from({ length: Math.floor(width / 96) }).map((_, ind) => {
-					const key = `${index + 1}-${ind + 1}`;
+				{Array.from({ length: cols }).map((_, colIndex) => {
+					const key = `${rowIndex + 1}-${colIndex + 1}`;
 					const imageData = images[key as keyof typeof images];
 					return (
 						<div
-							key={ind}
+							key={key}
 							className={cn(CardClassName, {
 								'flex flex-col hover:[box-shadow:0_0_30px_var(--card-color)]': imageData,
 								'transform scale-100 hover:scale-90 translate-z-0 transition-transform duration-1000 hover:duration-200 ease hover:ease-in-out':
 									!imageData,
 							})}
-							style={
-								{
-									'--card-color': imageData?.color,
-								} as React.CSSProperties
-							}
+							style={imageData ? ({ '--card-color': imageData.color } as React.CSSProperties) : undefined}
 						>
 							{imageData && (
 								<Image
@@ -141,12 +138,12 @@ function MySkills() {
 				})}
 			</div>
 		));
-	}, []);
+	}, [width]);
 
 	return (
 		<section className='relative min-h-screen flex flex-col'>
 			<div className='w-full flex justify-center absolute top-20'>
-				<p className='z-10 font-bold text-center lg:w-[60%] md:w-[80%] w-full lg:text-3xl sm:text-2xl text-xl'>
+				<p className='z-10 font-bold text-center lg:w-[60%] md:w-[80%] w-full lg:text-3xl text-2xl'>
 					Empowering projects with advanced skills in modern frameworks and tools
 				</p>
 			</div>
@@ -170,3 +167,57 @@ function MySkills() {
 }
 
 export default MySkills;
+// eslint-disable-next-line react/display-name
+// const GridItem = React.memo(
+// 	({ imageData, cardStyle }: { imageData?: (typeof ImagesObj)[keyof typeof ImagesObj]; cardStyle?: React.CSSProperties }) => {
+// 		return (
+// 			<div
+// 				className={cn(CardClassName, {
+// 					'flex flex-col hover:[box-shadow:0_0_30px_var(--card-color)]': imageData,
+// 				})}
+// 				style={cardStyle}
+// 			>
+// 				{imageData && (
+// 					<Image
+// 						width={50}
+// 						height={50}
+// 						src={imageData.image}
+// 						alt={imageData.alt}
+// 						className='select-none'
+// 						style={{
+// 							userSelect: 'none',
+// 							filter: `drop-shadow(0 0 .8rem color-mix(in srgb, ${imageData.color} 40%, transparent))`,
+// 						}}
+// 					/>
+// 				)}
+// 			</div>
+// 		);
+// 	}
+// );
+
+// const gridItems = useMemo(() => {
+// 	const rows = width > 620 ? 5 : width > 450 ? 7 : 9;
+// 	const cols = Math.floor(width / 96);
+
+// 	return Array.from({ length: rows }).map((_, rowIndex) => (
+// 		<div
+// 			key={rowIndex}
+// 			className={GridClassName}
+// 			style={{
+// 				transform: `translate3d(${rowIndex % 2 === 0 ? '-24px' : '24px'}, 0, 0)`,
+// 			}}
+// 		>
+// 			{Array.from({ length: cols }).map((_, colIndex) => {
+// 				const key = `${rowIndex + 1}-${colIndex + 1}`;
+// 				const imageData = images[key as keyof typeof images];
+// 				return (
+// 					<GridItem
+// 						key={colIndex}
+// 						imageData={imageData}
+// 						cardStyle={imageData ? ({ '--card-color': imageData.color } as React.CSSProperties) : undefined}
+// 					/>
+// 				);
+// 			})}
+// 		</div>
+// 	));
+// }, [width, images]);
