@@ -11,14 +11,19 @@ interface ProjectDetailsProps {
 	projectDescription: string;
 	imagesEnum: { image: any; alt: string }[];
 	website?: { link: any; name: string };
-	paginate?: { nextProjectLink?: string; prevProjectLink?: string };
+	paginate?: { nextProjectLink?: string; prevProjectLink?: string; backLink?: string };
 	technologies: string[];
 }
 
 const ProjectDetails: FC<ProjectDetailsProps> = ({ projectName, projectDescription, imagesEnum, website, paginate, technologies }) => {
 	return (
 		<div className='container mx-auto flex flex-col justify-center items-center gap-12 xl:px-[10rem] lg:px-12 p-6 pt-28'>
-			<h1 className='font-bold text-4xl '>{projectName}</h1>
+			<div className='flex justify-center flex-col sm:flex-row relative w-full'>
+				<div className='flex sm:absolute left-0 top-[6px]'>
+					{paginate?.backLink && <Paginate direction='left' text='Back' link={paginate?.backLink} />}
+				</div>
+				<h1 className='font-bold text-4xl'>{projectName}</h1>
+			</div>
 
 			{imagesEnum?.length > 0 && <CarousalImages imagesEnum={imagesEnum} />}
 

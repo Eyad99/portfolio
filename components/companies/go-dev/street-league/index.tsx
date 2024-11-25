@@ -25,7 +25,11 @@ const StreetLeague = () => {
 			}
 			imagesEnum={imagesEnum}
 			website={{ link: 'https://streetleague.ae/', name: "Street League's website" }}
-			paginate={{ nextProjectLink: '/company/go-dev/street-league-dashboard', prevProjectLink: '/company/go-dev/audio-analysis' }}
+			paginate={{
+				nextProjectLink: '/company/go-dev/street-league-dashboard',
+				prevProjectLink: '/company/go-dev/audio-analysis',
+				backLink: '/company/go-dev',
+			}}
 			technologies={['NextJs', 'React Query', 'Mui', 'Firebase', 'Pusher', 'Stripe', 'Tabby']}
 		/>
 	);

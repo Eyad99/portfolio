@@ -24,7 +24,11 @@ const VoiceAnalysis = () => {
 				'This project transforms audio files into text, analyzing conversations to distinguish between speakers and segmenting dialogue accordingly. It includes a quality assessment mechanism to evaluate call performance, generating insightful statistics for call center teams. The solution enhances call center operations by providing structured conversation breakdowns and metrics to drive improved communication and service quality'
 			}
 			imagesEnum={imagesEnum}
-			paginate={{ nextProjectLink: '/company/go-dev/street-league', prevProjectLink: '/company/go-dev/street-league-dashboard' }}
+			paginate={{
+				nextProjectLink: '/company/go-dev/street-league',
+				prevProjectLink: '/company/go-dev/street-league-dashboard',
+				backLink: '/company/go-dev',
+			}}
 			technologies={['Vite', 'React Query', 'Tailwind Css', 'Shadcn']}
 		/>
 	);

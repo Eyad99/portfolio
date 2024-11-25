@@ -48,14 +48,12 @@ const Panner = () => {
 									transition-all before:absolute before:left-0 before:top-0 before:bottom-0 before:bg-secondary
 									before:transition-all before:duration-500 before:w-0 hover:before:w-full
 									hover:text-primary'
+									onClick={(event: any) => {
+										event.preventDefault();
+										window.open('/resume.pdf', '_blank');
+									}}
 								>
-									<div
-										className='flex justify-between items-center gap-4 relative z-10'
-										onClick={(event: any) => {
-											event.preventDefault();
-											window.open('/resume.pdf', '_blank');
-										}}
-									>
+									<div className='flex justify-between items-center gap-4 relative z-10'>
 										<FileText />
 										<span className='sm:text-[16px] text-[14px]'>See My Resume</span>
 									</div>

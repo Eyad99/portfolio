@@ -26,6 +26,9 @@ const Rush = () => {
 			}
 			imagesEnum={imagesEnum}
 			website={{ link: 'https://lb-merchant.redrush.co/', name: 'Rush website' }}
+			paginate={{
+				backLink: '/company/cubeta',
+			}}
 			technologies={['NextJs', 'Redux Toolkit', 'Ant Design']}
 		/>
 	);

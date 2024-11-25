@@ -13,10 +13,15 @@ const CompanyDetails: FC<CompanyDetailsProps> = ({ projects, paginate }) => {
 	return (
 		<section className={`container mx-auto flex flex-col justify-center m-auto gap-10 xl:px-[10rem] lg:px-12 p-6 pt-28 `}>
 			<div className='flex flex-col justify-center items-center gap-4'>
-				<h1 className='font-bold'>
-					<span className='text-4xl'>/</span>
-					<span className='text-[#474747] text-3xl'>Work.</span>
-				</h1>
+				<div className='flex justify-center relative w-full'>
+					<div className='flex absolute left-0 top-[6px]'>
+						<Paginate direction='left' text='Back' link={'/#works'} />
+					</div>
+					<h1 className='font-bold'>
+						<span className='text-4xl'>/</span>
+						<span className='text-[#474747] text-3xl'>Work.</span>
+					</h1>
+				</div>
 				<p className='text-xl font-bold text-center '>A collection of projects I've worked on.</p>
 			</div>
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full'>

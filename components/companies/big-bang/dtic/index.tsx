@@ -10,6 +10,9 @@ const Dtic = () => {
 			}
 			imagesEnum={[]}
 			website={{ link: 'https://dtic.co/', name: 'Dtic website' }}
+			paginate={{
+				backLink: '/company/big-bang',
+			}}
 			technologies={['NextJs', 'Redux Toolkit', 'Ant Design']}
 		/>
 	);

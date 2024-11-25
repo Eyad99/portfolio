@@ -24,7 +24,11 @@ const StreetLeagueDashboard = () => {
 				'Designed a multi-vendor e-commerce dashboard for a football-centric platform, allowing seamless management of product listings, transactions, ground bookings, and user participation in events. The dashboard includes sections for payment tracking, inventory management, and a custom design interface for personalized sportswear, streamlining all aspects of the football merchandise and activity experience.'
 			}
 			imagesEnum={imagesEnum}
-			paginate={{ nextProjectLink: '/company/go-dev/audio-analysis', prevProjectLink: '/company/go-dev/street-league' }}
+			paginate={{
+				nextProjectLink: '/company/go-dev/audio-analysis',
+				prevProjectLink: '/company/go-dev/street-league',
+				backLink: '/company/go-dev',
+			}}
 			technologies={['NextJs', 'React Query', 'Mui', 'Firebase', 'ChartJs']}
 		/>
 	);
