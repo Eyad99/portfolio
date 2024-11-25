@@ -20,21 +20,21 @@ const Paginate = ({ text, link, direction = 'right' }: { text: string; link: str
 			<Link href={link} passHref>
 				{direction == 'right' ? (
 					<div className='flex items-center'>
-						<span className='text-lg  font-semibold'>{text}</span>
-						<div className='w-8 flex justify-center'>
+						<span className='sm:text-lg text-md font-semibold'>{text}</span>
+						<div className='sm:w-8 w-4 flex justify-center items-center'>
 							<motion.div initial='initial' animate='animate' variants={arrowVariants}>
-								<ArrowRight className='w-6 h-6  ' />
+								<ArrowRight className='sm:w-5 w-5 sm:h-5 h-5  ' />
 							</motion.div>
 						</div>
 					</div>
 				) : (
 					<div className='flex items-center'>
-						<div className='w-8 flex justify-center'>
+						<div className='sm:w-8 w-4 flex justify-center items-center'>
 							<motion.div initial='initial' animate='animate' variants={arrowVariants}>
-								<ArrowLeft className='w-6 h-6  ' />
+								<ArrowLeft className='sm:w-5 w-5 sm:h-5 h-5  ' />
 							</motion.div>
 						</div>
-						<span className='text-lg font-semibold'>{text}</span>
+						<span className='sm:text-lg text-md font-semibold'>{text}</span>
 					</div>
 				)}
 			</Link>

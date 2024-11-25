@@ -8,7 +8,7 @@ import MyTeamImage from '@/assets/projects/street-league/my-team.png';
 import MainImage from '@/assets/projects/street-league/main.png';
 
 const StreetLeague = () => {
-	const ImagesEmun = [
+	const imagesEnum = [
 		{ image: MainImage, alt: 'MainImage' },
 		{ image: MyTeamImage, alt: 'MyTeamImage' },
 		{ image: SingeProductImage, alt: 'SingeProductImage' },
@@ -23,7 +23,7 @@ const StreetLeague = () => {
 			projectDescription={
 				'Street League is a platform centered around competitive sports leagues and events. It offers a space for teams and players to engage in various sports competitions. The site provides registration options, event details, and access to their shop for sports	gear and accessories. Additionally, users can follow updates and connect with the community through the platform. It also offers downloadable apps for easy access to schedules, results, and other relevant information. For more details,you can visit '
 			}
-			imagesEmun={ImagesEmun}
+			imagesEnum={imagesEnum}
 			website={{ link: 'https://streetleague.ae/', name: "Street League's website" }}
 			paginate={{ nextProjectLink: '/company/go-dev/street-league-dashboard', prevProjectLink: '/company/go-dev/audio-analysis' }}
 			technologies={['NextJs', 'React Query', 'Mui', 'Firebase', 'Pusher', 'Stripe', 'Tabby']}

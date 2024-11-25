@@ -12,7 +12,7 @@ const Cubeta = () => {
 			url: 'https://lb-merchant.redrush.co/',
 		},
 	];
-	return <CompanyDetails projects={projects} paginate={{ nextProjectLink: '/company/ugaritech', prevProjectLink: '/company/big-bang' }} />;
+	return <CompanyDetails projects={projects} paginate={{ nextProjectLink: '/company/big-bang', prevProjectLink: '/company/ugaritech' }} />;
 };
 
 export default Cubeta;

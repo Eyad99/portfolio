@@ -12,7 +12,7 @@ const Ugaritech = () => {
 		},
 	];
 
-	return <CompanyDetails projects={projects} paginate={{ nextProjectLink: '/company/go-dev', prevProjectLink: '/company/cubeta' }} />;
+	return <CompanyDetails projects={projects} paginate={{ nextProjectLink: '/company/cubeta', prevProjectLink: '/company/go-dev' }} />;
 };
 
 export default Ugaritech;

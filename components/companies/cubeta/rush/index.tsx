@@ -9,7 +9,7 @@ import OrderImage from '@/assets/projects/rush/order.png';
 import MapImage from '@/assets/projects/rush/map.png';
 
 const Rush = () => {
-	const ImagesEmun = [
+	const imagesEnum = [
 		{ image: SignInImage, alt: 'SignInImage' },
 		{ image: DashboardImage, alt: 'DashboardImage' },
 		{ image: MapImage, alt: 'MapImage' },
@@ -24,7 +24,7 @@ const Rush = () => {
 			projectDescription={
 				'This software system provides a convenient on-demand delivery service with door-to-door and package delivery options. It offers features such as restaurant reservations, coupons, and discounts to enhance user convenience. Users can benefit from a built-in loyalty program with gamified rewards, manage their account balances, and access a digital wallet. The system also integrates a Delivery Management System (DMS) to streamline the ordering and delivery processes effectively.'
 			}
-			imagesEmun={ImagesEmun}
+			imagesEnum={imagesEnum}
 			website={{ link: 'https://lb-merchant.redrush.co/', name: 'Rush website' }}
 			technologies={['NextJs', 'Redux Toolkit', 'Ant Design']}
 		/>

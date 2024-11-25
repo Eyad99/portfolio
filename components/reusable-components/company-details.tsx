@@ -26,8 +26,8 @@ const CompanyDetails: FC<CompanyDetailsProps> = ({ projects, paginate }) => {
 			</div>
 			{(paginate?.nextProjectLink || paginate?.prevProjectLink) && (
 				<div className='flex justify-between'>
-					{paginate?.prevProjectLink && <Paginate direction='left' text='Previous Project' link={paginate.prevProjectLink} />}
-					{paginate?.nextProjectLink && <Paginate text='Next Project' link={paginate.nextProjectLink} />}
+					{paginate?.prevProjectLink && <Paginate direction='left' text='Previous Company' link={paginate.prevProjectLink} />}
+					{paginate?.nextProjectLink && <Paginate text='Next Company' link={paginate.nextProjectLink} />}
 				</div>
 			)}
 			<Separator orientation='horizontal' className='h-[1px]' />

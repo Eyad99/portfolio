@@ -8,7 +8,7 @@ import OrdersImage from '@/assets/projects/street-league-dashboard/orders.png';
 import SortImage from '@/assets/projects/street-league-dashboard/sort.png';
 
 const StreetLeagueDashboard = () => {
-	const ImagesEmun = [
+	const imagesEnum = [
 		{ image: DashboardImage, alt: 'DashboardImage' },
 		{ image: OrdersImage, alt: 'OrdersImage' },
 		{ image: CateoryListImage, alt: 'CateoryListImage' },
@@ -23,7 +23,7 @@ const StreetLeagueDashboard = () => {
 			projectDescription={
 				'Designed a multi-vendor e-commerce dashboard for a football-centric platform, allowing seamless management of product listings, transactions, ground bookings, and user participation in events. The dashboard includes sections for payment tracking, inventory management, and a custom design interface for personalized sportswear, streamlining all aspects of the football merchandise and activity experience.'
 			}
-			imagesEmun={ImagesEmun}
+			imagesEnum={imagesEnum}
 			paginate={{ nextProjectLink: '/company/go-dev/audio-analysis', prevProjectLink: '/company/go-dev/street-league' }}
 			technologies={['NextJs', 'React Query', 'Mui', 'Firebase', 'ChartJs']}
 		/>

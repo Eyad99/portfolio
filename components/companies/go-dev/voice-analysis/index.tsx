@@ -8,7 +8,7 @@ import AudioImage from '@/assets/projects/audio-analysis/audio.png';
 import ChartImage from '@/assets/projects/audio-analysis/chart.png';
 
 const VoiceAnalysis = () => {
-	const ImagesEmun = [
+	const imagesEnum = [
 		{ image: SignInImage, alt: 'SignInImage' },
 		{ image: AudioImage, alt: 'AudioImage' },
 		{ image: AudioDetailImage, alt: 'AudioDetailImage' },
@@ -23,7 +23,7 @@ const VoiceAnalysis = () => {
 			projectDescription={
 				'This project transforms audio files into text, analyzing conversations to distinguish between speakers and segmenting dialogue accordingly. It includes a quality assessment mechanism to evaluate call performance, generating insightful statistics for call center teams. The solution enhances call center operations by providing structured conversation breakdowns and metrics to drive improved communication and service quality'
 			}
-			imagesEmun={ImagesEmun}
+			imagesEnum={imagesEnum}
 			paginate={{ nextProjectLink: '/company/go-dev/street-league', prevProjectLink: '/company/go-dev/street-league-dashboard' }}
 			technologies={['Vite', 'React Query', 'Tailwind Css', 'Shadcn']}
 		/>

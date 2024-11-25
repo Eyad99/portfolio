@@ -8,7 +8,7 @@ const Dtic = () => {
 			projectDescription={
 				'This single-vendor e-commerce platform provides a streamlined solution for order management and product display, creating a unique and dynamic online shopping experience.'
 			}
-			imagesEmun={[]}
+			imagesEnum={[]}
 			website={{ link: 'https://dtic.co/', name: 'Dtic website' }}
 			technologies={['NextJs', 'Redux Toolkit', 'Ant Design']}
 		/>

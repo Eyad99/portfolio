@@ -13,7 +13,7 @@ const BigBang = () => {
 		},
 	];
 
-	return <CompanyDetails projects={projects} paginate={{ nextProjectLink: '/company/cubeta', prevProjectLink: '/company/go-dev' }} />;
+	return <CompanyDetails projects={projects} paginate={{ nextProjectLink: '/company/go-dev', prevProjectLink: '/company/cubeta' }} />;
 };
 
 export default BigBang;
