@@ -11,8 +11,7 @@ interface CompanyDetailsProps {
 }
 const CompanyDetails: FC<CompanyDetailsProps> = ({ projects, paginate }) => {
 	return (
-		// <section className={`container mx-auto flex flex-col justify-center m-auto sm:w-[75%] w-full p-6 gap-10`}>
-		<section className={`container mx-auto flex flex-col justify-center m-auto gap-10 xl:px-[10rem] lg:px-12 p-6`}>
+		<section className={`container mx-auto flex flex-col justify-center m-auto gap-10 xl:px-[10rem] lg:px-12 p-6 pt-28 `}>
 			<div className='flex flex-col justify-center items-center gap-4'>
 				<h1 className='font-bold'>
 					<span className='text-4xl'>/</span>

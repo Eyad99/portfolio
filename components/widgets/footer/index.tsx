@@ -4,8 +4,11 @@ import Link from 'next/link';
 import { Linkedin, Github, Twitter, ArrowRight, Mail, MessageSquare, Gitlab } from 'lucide-react';
 import { Separator } from '@radix-ui/react-separator';
 import { motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
+	const path = usePathname();
+
 	return (
 		<section className={`relative min-h-screen bg-primary`}>
 			<div className='container mx-auto flex flex-col xl:px-[10rem] lg:px-12 px-6'>
@@ -85,7 +88,7 @@ const Footer = () => {
 								<Link
 									href='/#works'
 									onClick={(e) => {
-										e.preventDefault();
+										path === '/' && e.preventDefault();
 										document.getElementById('works')?.scrollIntoView({ behavior: 'smooth' });
 									}}
 									className='flex items-center gap-3 sm:text-xl text-lg text-secondary hover:text-[#697565] transition-colors'

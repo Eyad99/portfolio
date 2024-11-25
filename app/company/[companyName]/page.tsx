@@ -28,7 +28,7 @@ const CompanyName = () => {
 	};
 
 	return (
-		<div className='mt-28'>
+		<div>
 			{renderCompanyComponent(companyName)}
 			<Footer />
 		</div>
