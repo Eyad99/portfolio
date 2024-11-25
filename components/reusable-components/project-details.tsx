@@ -18,7 +18,9 @@ interface ProjectDetailsProps {
 
 const ProjectDetails: FC<ProjectDetailsProps> = ({ projectName, projectDescription, imagesEmun, website, paginate, technologies }) => {
 	return (
+		// <div className='flex flex-col justify-center items-center sm:m-28 m-10 gap-16'>
 		<div className='flex flex-col justify-center items-center sm:m-28 m-10 gap-16'>
+			{/* // <div className='flex flex-col justify-center items-center gap-16 xl:px-[10rem] lg:px-12 p-6'> */}
 			<h1 className='font-bold text-4xl '>{projectName}</h1>
 			<Carousel
 				opts={{
