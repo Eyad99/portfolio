@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Mail, Menu, X } from 'lucide-react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
-const Header = () => {
+const Header = ({ agustinaFont }: { agustinaFont: string }) => {
 	// react-router-dom V5 => useHistory() [history.push()]
 	// react-router-dom V6 => useNavigate() [navigate()]
 	// Next => useRouter() [router.push()]
@@ -63,12 +63,13 @@ const Header = () => {
 			opacity: 1,
 		},
 	};
+
 	return (
 		<div className='fixed top-0 left-0 w-full z-50'>
 			{/* Header content */}
 			<div className='flex justify-between items-center md:px-12 px-6 py-6 w-full'>
 				<Link href={'/'}>
-					<h1 className='text-xl font-bold cursor-pointer font-agustina'>Eyad Sharaf Almasri</h1>
+					<h1 className={`text-xl font-bold cursor-pointer ${agustinaFont}`}>Eyad Sharaf Almasri</h1>
 				</Link>
 				<button onClick={toggleMenu} className='z-50' aria-label='Toggle menu'>
 					{isMenuOpen ? <X size={32} /> : <Menu size={32} />}

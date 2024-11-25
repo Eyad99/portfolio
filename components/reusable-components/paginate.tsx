@@ -20,7 +20,7 @@ const Paginate = ({ text, link, direction = 'right' }: { text: string; link: str
 			<Link href={link} passHref>
 				{direction == 'right' ? (
 					<div className='flex items-center'>
-						<span className='text-lg font-semibold'>{text}</span>
+						<span className='text-lg  font-semibold'>{text}</span>
 						<div className='w-8 flex justify-center'>
 							<motion.div initial='initial' animate='animate' variants={arrowVariants}>
 								<ArrowRight className='w-6 h-6  ' />

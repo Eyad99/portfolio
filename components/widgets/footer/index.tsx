@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 const Footer = () => {
 	return (
 		<section className={`relative min-h-screen bg-primary`}>
-			<div className='container mx-auto px-6 lg:px-12 xl:px-[10rem] flex flex-col'>
+			<div className='container mx-auto flex flex-col xl:px-[10rem] lg:px-12 px-6'>
 				{/* Animation */}
 				<div className='absolute inset-0 overflow-hidden'>
 					{[...Array(20)].map((_, i) => (

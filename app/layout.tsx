@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import './globals.css';
-import Header from '@/components/widgets/header';
-import RouadMap from '@/components/reusable-components/rouad-map';
 import { Toaster } from '@/components/ui/toaster';
+import localFont from 'next/font/local';
+import RouadMap from '@/components/reusable-components/rouad-map';
+import Header from '@/components/widgets/header';
+import './globals.css';
 
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
@@ -16,9 +16,18 @@ const geistMono = localFont({
 	weight: '100 900',
 });
 
+const agustina = localFont({
+	src: './fonts/Agustina.woff',
+	variable: '--font-agustina',
+	weight: '100 900',
+});
+
 export const metadata: Metadata = {
 	title: 'Eyad Sharaf Almasri',
-	description: 'This site contains a gallery of my works and personal skills',
+	description: 'Software Engineer | Frontend Developer specializing in React, Next.js, and modern web technologies.',
+	applicationName: 'My Portfolio',
+	icons: [{ url: '/logo.ico', type: 'image/svg+xml', rel: 'icon' }],
+	authors: { name: 'Eyad Sharaf Almasri' },
 };
 
 export default function RootLayout({
@@ -28,9 +37,16 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
+			<head>
+				<meta
+					name='keywords'
+					content='senior frontend developer,frontend developer, React, Next.js, JavaScript, typescript, web developer, portfolio'
+				/>
+				<meta name='robots' content='index, follow' />
+			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
 				<main className='md:snap-y md:snap-mandatory overflow-y-scroll h-screen scrollbar'>
-					<Header />
+					<Header agustinaFont={agustina.className} />
 					{children}
 					<RouadMap />
 					<Toaster />
