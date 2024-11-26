@@ -40,7 +40,7 @@ export default function RootLayout({
 			<head>
 				<meta
 					name='keywords'
-					content='senior frontend developer,frontend developer, React, Next.js, JavaScript, typescript, web developer, portfolio'
+					content='eyad sharaf almasri,اياد شرف المصري ,senior frontend developer,frontend developer, React, Next.js, JavaScript, typescript, web developer, portfolio'
 				/>
 				<meta name='robots' content='index, follow' />
 			</head>
