@@ -124,8 +124,8 @@ export default function Intro() {
 			{!introFinished && (
 				<div ref={introRef} className={`fixed inset-0 bg-primary flex flex-col items-center justify-center z-50`}>
 					<canvas ref={canvasRef} className='absolute inset-0' />
-					<h1 className='text-4xl md:text-6xl font-bold text-white mb-4 relative z-10'>Eyad Sharaf Almasri</h1>
-					<p className='text-2xl relative z-10'>Frontend Developer</p>
+					<h1 className='sm:text-4xl text-3xl md:text-6xl font-bold text-white mb-4 relative z-10 text-center'>Eyad Sharaf Almasri</h1>
+					<p className='sm:text-2xl text-xl relative z-10 text-center'>Software Engineer | Frontend Developer</p>
 				</div>
 			)}
 		</>

@@ -57,6 +57,7 @@ const CarousalImages = ({ imagesEnum }: { imagesEnum: { image: any; alt: string 
 							current === index ? 'bg-text w-4' : 'bg-white border border-text'
 						)}
 						onClick={() => api?.scrollTo(index)}
+						aria-label={`${index}`}
 					/>
 				))}
 			</div>
