@@ -8,6 +8,7 @@ import Intro from '@/components/sections/intro';
 import { IntroProvider } from '@/hooks/intro-context';
 
 export default function Home() {
+	console.log('');
 	return (
 		<IntroProvider>
 			<Intro />
