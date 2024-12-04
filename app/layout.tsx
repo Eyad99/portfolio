@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import RouadMap from '@/components/reusable-components/rouad-map';
 import Header from '@/components/widgets/header';
 import './globals.css';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const geistSans = localFont({
 	src: './fonts/GeistVF.woff',
@@ -45,12 +46,14 @@ export default function RootLayout({
 				<meta name='robots' content='index, follow' />
 			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased `}>
-				<main className='md:snap-y md:snap-mandatory overflow-y-scroll h-screen scrollbar'>
-					<Header agustinaFont={agustina.className} />
-					{children}
-					<RouadMap />
-					<Toaster />
-				</main>
+				<ThemeProvider attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
+					<main className='md:snap-y md:snap-mandatory overflow-y-scroll h-screen scrollbar'>
+						<Header agustinaFont={agustina.className} />
+						{children}
+						<RouadMap />
+						<Toaster />
+					</main>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
