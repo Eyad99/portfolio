@@ -100,7 +100,7 @@ const Footer = () => {
 							<motion.div className='group' whileHover={{ x: 5 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
 								<Link
 									target='_blank'
-									href='/resume.pdf'
+									href='/frontend-developer-[eyad-sharaf-almasri].pdf'
 									className='flex items-center gap-3 sm:text-xl text-lg text-secondary hover:text-[#697565] transition-colors'
 								>
 									<span>My Resume</span>

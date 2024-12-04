@@ -119,7 +119,7 @@ const Header = ({ agustinaFont }: { agustinaFont: string }) => {
 									</Link>
 								</motion.a>
 								<motion.a
-									href='/resume.pdf'
+									href='/frontend-developer-[eyad-sharaf-almasri].pdf'
 									variants={itemVariants}
 									className='block text-4xl font-light hover:text-primary transition-colors'
 									target='_blank'
