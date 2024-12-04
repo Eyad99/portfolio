@@ -57,11 +57,11 @@ const Footer = () => {
 						>
 							<motion.div className='group' whileHover={{ x: 5 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
 								<Link
-									href='mailto:iead.sh123@gmail'
+									href='mailto:eyadsharafalmasri@gmail.com'
 									className='flex items-center gap-3 sm:text-xl text-lg text-secondary hover:text-[#697565] transition-colors'
 								>
 									<Mail className='w-6 h-6' />
-									<span>iead.sh123@gmail</span>
+									<span>eyadsharafalmasri@gmail.com</span>
 									<ArrowRight className='w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity' />
 								</Link>
 							</motion.div>

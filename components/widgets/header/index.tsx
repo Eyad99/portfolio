@@ -131,9 +131,12 @@ const Header = ({ agustinaFont }: { agustinaFont: string }) => {
 							<motion.div variants={itemVariants} className='space-y-8'>
 								<h2 className='text-2xl font-light text-primary'>Say Hello</h2>
 								<div className='space-y-4'>
-									<a href='mailto:iead.sh123@gmail.com' className='flex items-center gap-2 text-lg hover:text-primary transition-colors'>
+									<a
+										href='mailto:eyadsharafalmasri@gmail.com'
+										className='flex items-center gap-2 text-lg hover:text-primary transition-colors'
+									>
 										<Mail className='h-5 w-5' />
-										iead.sh123@gmail.com
+										eyadsharafalmasri@gmail.com
 									</a>
 									<a
 										href='https://t.me/eyad_sharaf_almasri'
