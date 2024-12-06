@@ -19,6 +19,7 @@ import htmlIcon from '@/assets/img/my-skills/html.svg';
 import jestIcon from '@/assets/img/my-skills/jest.svg';
 import cssIcon from '@/assets/img/my-skills/css.svg';
 import jsIcon from '@/assets/img/my-skills/js.svg';
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from '@radix-ui/react-tooltip';
 
 const GridClassName = 'grid auto-cols-[96px] gap-6 justify-start mb-6 relative whitespace-nowrap grid-flow-col ';
 const CardClassName =
