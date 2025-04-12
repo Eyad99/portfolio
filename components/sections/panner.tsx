@@ -50,7 +50,7 @@ const Panner = () => {
 									hover:text-primary'
 									onClick={(event: any) => {
 										event.preventDefault();
-										window.open('/frontend-developer-[eyad-sharaf-almasri].pdf', '_blank');
+										window.open('/senior-frontend-developer-[eyad-sharaf-almasri].pdf', '_blank');
 									}}
 								>
 									<div className='flex justify-between items-center gap-4 relative z-10'>
