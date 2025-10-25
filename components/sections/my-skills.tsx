@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 
 import Image from 'next/image';
 import framerMotionIcon from '@/assets/img/my-skills/framer-motion.svg';
-import tailwindCssIcon from '@/assets/img/my-skills/tailwindCss.svg';
+import tailwindCssIcon from '@/assets/img/my-skills/tailwindcss.svg';
 import materialUiIcon from '@/assets/img/my-skills/material-ui.svg';
 import reactQueryIcon from '@/assets/img/my-skills/react-query.svg';
 import storyBookIcon from '@/assets/img/my-skills/story-book.svg';
